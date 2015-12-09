@@ -19,16 +19,14 @@ function redirect(pieceId){
 	window.location= "PLACEHOLDER/pieces.php?partId=" + pieceId;
 }
 
-function displayPartId(boxId){
-	var child= document.getElementById(boxId).children;
-	// om <span> i <p>
-	/*var grandChild= child[1].children;
-	grandChild[0].className= "visiblePartId";*/
-	child[2].className = "visiblePartId";
+function focusTextField(){
+	var windowWidth = window.innerWidth;
+	
+	if(windowWidth < 400)
+		var textFieldId = 'smallPlaceholder';
+	else
+		var textFieldId = 'largePlaceholder';
+	
+	document.getElementById(textFieldId).focus();
 }
-function hidePartId(boxId){
-	var child= document.getElementById(boxId).children;
-	/*var grandChild= child[1].children;
-	grandChild[0].className= "hiddenPartId";*/
-	child[2].className = "hiddenPartId";
-}
+

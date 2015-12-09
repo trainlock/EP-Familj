@@ -182,7 +182,7 @@ Huvudsida*/
 	content: ' ';
 	position: absolute;
 	left: 38px;
-	bottom: 132px;
+	/*bottom: 132px;*/
 	border: 28px solid;
 	border-color: transparent transparent #000000 #000000;
 }
@@ -190,14 +190,25 @@ Huvudsida*/
 	content: ' ';
 	position: absolute;
 	left: 40px;
-	bottom: 127px;
+	/*bottom: 127px;*/
 	border: 28px solid;
 	border-color: transparent transparent #FFFFFF #FFFFFF;
 }
 
+@media screen and (min-width: 400px) and (min-height: 545px){
+	.speechBubble:before{
+	top: -57px;
+	}
+	.speechBubble:after{
+		top: -52px;
+	}
+}
+
+
 @media screen and (max-width: 400px){
 	.searchContainer{
-		min-width: 60%;		
+		width: 60%;
+		min-width: 160px;	
 	}
 	
 	.searchBox{
@@ -214,12 +225,14 @@ Huvudsida*/
 	
 	.speechBubble:before{
 		left: 35px;
-		bottom: 132px;
+		top: -57px;
+		/*bottom: 132px;*/
 		border-color: transparent #000000 #000000 transparent;
 	}
 	.speechBubble:after{
 		left: 33px;
-		bottom: 127px;
+		top: -52px;
+		/*bottom: 127px;*/
 		border-color: transparent #FFFFFF #FFFFFF transparent;
 	}
 	
@@ -237,7 +250,7 @@ Huvudsida*/
 	}
 }
 
-/* Bättre att flytta pratbubblan vid max-height: 335px? */
+/* Bättre att flytta pratbubblan vid max-height: 335px? 545*/
 @media screen and (max-height: 545px){
 	.logo{
 		min-height: 80px;
@@ -275,12 +288,12 @@ Huvudsida*/
 		padding: 9.5px 8px;
 	}
 	
-	.speechBubble:before{	
-		top: 132px;
+	.speechBubble:before{
+		bottom: -56px;
 		border-color: #000000 transparent transparent #000000;
 	}
 	.speechBubble:after{
-		top: 127px;
+		bottom: -52px;
 		border-color: #FFFFFF transparent transparent #FFFFFF;
 	}
 	
@@ -290,16 +303,21 @@ Huvudsida*/
 	
 }
 
-@media screen and (max-height: 335px) and (max-width: 400px){
+
+@media screen and (max-height: 545px) and (max-width: 400px){
 	.speechBubble{
 		margin-left: 0;
 	}
 	
 	.speechBubble:before{
+		top: 132px;
+		bottom: -30px;
 		left: 85px;		
 		border-color: #000000 transparent transparent #000000;
 	}
 	.speechBubble:after{
+		top: 127px;
+		bottom: 0;
 		left: 87px;
 		border-color: #FFFFFF transparent transparent #FFFFFF;
 	}
