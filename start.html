@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>sida1</title>
+		<link rel="stylesheet" type="text/css" href="multiple.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+	<div class="centerWrapper">
+		<div class="centerDiv">
+			<div class="logo">
+				<h1>LegoWars</h1>
+				<div class="menuContainer">
+					<ul>
+					  <li><a class="active" href="#home">Search</a></li>
+					  <li><a href="#news">Help</a></li>
+					  <li><a href="#about">About</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!--<div class="containerContainer"></div>-->
+				
+				<div class="textContainer">
+					<p>Welcome. Search for lego part.</p>
+				</div>
+				
+				<div class="searchContainer">
+						<form action="search.php" method="post">
+							<!--Mer utförlig placeholder för större fönster-->
+							<input class="searchBox" placeholder="Search piece name or id" 
+							type="text" id="largePlaceholder" name="searchWord">
+							<!--Kortare placeholder för mindre fönster, ändras vi fönsterbredd 400px-->
+							<input class="searchBox" placeholder="Search piece" 
+							type="text" id="smallPlaceholder" name="searchWord"><br>
+							<input type="submit" class="searchButton" value="Search">
+							<div class="helpIcon" onmouseover="showHelpBox('helpContainer')" 
+							onmouseout=" hideHelpBox('helpContainer')">?</div>
+						</form>
+					<div id="helpContainer">
+						<div class="speechBubble">
+							<p>To find a lego piece, search for it's id-number or a part of the name.</p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	</body>
+</html>
