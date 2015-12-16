@@ -15,8 +15,8 @@ function goToErrorPage(){
 	window.location = "error.html";
 }
 
-function redirect(pieceId){
-	window.location= "PLACEHOLDER/pieces.php?partId=" + pieceId;
+function redirect(pieceId, colorID){
+	window.location= "single.php?partID=" + pieceId + "&colorID=" + colorID;
 }
 
 function focusTextField(){
