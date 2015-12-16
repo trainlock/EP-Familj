@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="script.js"></script></head>           
-	<body>       
+	<body onload="blurButton('previousButton')">       
 	<div class="centerWrapper">
 		
 		 <!--Huvuddelen av sidan, absolut så den täcker hela sidans höjd-->
@@ -32,11 +32,11 @@
 				include('search_handler.php');
 			?>
 			<div class="buttonDiv">
-				<form method="post" action="http://www.student.itn.liu.se/~minta518/tnmk30/EP-Familj-master/search.php">
+				<form method="post" action="search.php">
 					<input type="hidden" name="hiddenEntry" value="<?php echo htmlspecialchars($search); ?>">
-					<input type="hidden" name="offsetValue" value="<?php echo htmlspecialchars($offset); ?>";>
-					<input type="submit" name="page" class="pageButton" value="next">
+					<input type="hidden" name="offsetValue" value="<?php echo htmlspecialchars($offset); ?>" id="offsetValue">
 					<input type="submit" name="page" class="pageButton" value="previous" id="previousButton">
+					<input type="submit" name="page" class="pageButton" value="next" id="nextButton">
 				</form>
 			</div>
 		</div>

@@ -30,13 +30,27 @@ function focusTextField(){
 	document.getElementById(textFieldId).focus();
 }
 
-function blurPreviousButton(buttonID){
-	var buttonElement = document.getElementById(buttonID);
+// Inaktivera previousknappen då första sidan visas
+
+// Kolla offset från gömd input
+function checkOffset(){
+	var pageOffset = document.getElementById('offsetValue').value;
 	
-	// Ändra färg på text
-	buttonElement.style.color = "#B3BABD";
+	return pageOffset;
+}
+
+function blurButton(buttonID){
 	
-	// Deaktivera knappen
-	buttonElement.disabled = "true";
+	var offsetValue = checkOffset();
+
+	if(offsetValue == 0){
+		var buttonElement = document.getElementById(buttonID);
+		
+		// Ändra färg på text
+		buttonElement.style.color = "#B3BABD";
+		
+		// Deaktivera knappen
+		buttonElement.disabled = "true";
+	}
 }
 

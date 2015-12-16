@@ -42,9 +42,10 @@
 		$offset += $OFFSET_NR;
 	else if($_POST['page'] === "previous")
 	{
-		if($_POST['offsetValue'] == 0)
-			echo '<script>goToErrorPage();</script>';
-		else
+		//if($_POST['offsetValue'] == 0)
+			//echo "<script>blurButton('previousButton');</script>";
+		//else
+			if($_POST['offsetValue'] != 0)
 			$offset -= $OFFSET_NR;
 	}
 	
@@ -61,8 +62,6 @@
 	
 	// Skriv ut alla poster i svaret 
 	// Det här bör skicka vidare till errorsidan om inga resultat fås
-		
-	echo $offset;
 	
 	if(mysql_num_rows($result) === 0){
 		echo '<script>goToErrorPage();</script>';
