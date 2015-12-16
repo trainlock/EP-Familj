@@ -30,7 +30,16 @@
 			</div>		
 			<?php                                                                                                                     
 				include('search_handler.php');
-			?>            
+			?>
+			<div class="buttonDiv">
+				Click the previous or next-buttons to navigate between pages with searchresults.<br>
+				<form method="post" action="http://www.student.itn.liu.se/~minta518/tnmk30/EP-Familj-master/search.php">
+					<input type="hidden" name="searchEntry" value="<?php echo htmlspecialchars($searchEntry); ?>">
+					<input type="hidden" name="offset" value="<?php echo htmlspecialchars($offset); ?>";>
+					<input type="submit" name="page" class="pageButton" value="next">
+					<input type="submit" name="page" class="pageButton" value="previous">
+				</form>
+			</div>
 		</div>
 	</div>
 	</body>
