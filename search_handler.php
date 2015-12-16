@@ -29,12 +29,6 @@
 	else {
 		$searchEntry = $search;
 	}
-	
-	/*if($searchEntry == "") {
-		echo 'Inget sökresultat';
-		//echo '<script>goToErrorPage();</script>';
-	}*/
-	
 		
 	if(!isset($_POST['page']))
 		$_POST['page'] = "";
@@ -48,7 +42,6 @@
 			$offset -= $OFFSET_NR;
 	}
 	
-	
 	// Ställ frågan    
 	$result = mysql_query("SELECT parts.Partname, parts.PartID, images.colorID, images.has_gif, images.has_jpg, images.itemtypeID
 							FROM parts
@@ -56,14 +49,10 @@
 									ON parts.PartID=images.itemID
 							WHERE parts.Partname LIKE '%$searchEntry%' 
 							OR parts.PartID LIKE '%$searchEntry%'
-							LIMIT $limit OFFSET $offset;
+							LIMIT 10;
 							");
 	
 	// Skriv ut alla poster i svaret 
-	// Det här bör skicka vidare till errorsidan om inga resultat fås
-		
-	echo $offset;
-	
 	if(mysql_num_rows($result) === 0){
 		echo '<script>goToErrorPage();</script>';
 	}

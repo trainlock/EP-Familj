@@ -15,8 +15,8 @@ function goToErrorPage(){
 	window.location = "error.html";
 }
 
-function redirect(pieceId){
-	window.location= "PLACEHOLDER/pieces.php?partId=" + pieceId;
+function redirect(partId, colorID){
+	window.location= "single.php?partID=" + partId + "&colorID=" + colorID;
 }
 
 function focusTextField(){
@@ -28,5 +28,15 @@ function focusTextField(){
 		var textFieldId = 'largePlaceholder';
 	
 	document.getElementById(textFieldId).focus();
+}
+
+function blurPreviousButton(buttonID){
+	var buttonElement = document.getElementById(buttonID);
+	
+	// Ändra färg på text
+	buttonElement.style.color = "#B3BABD";
+	
+	// Deaktivera knappen
+	buttonElement.disabled = "true";
 }
 

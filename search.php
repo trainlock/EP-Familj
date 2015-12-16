@@ -15,7 +15,7 @@
 				<h1>LegoWars</h1>
 				<div class="menuContainer">
 					<ul>
-						<li><a class="active" href="#home">Search</a></li>
+						<li><a class="active" href="start.html">Search</a></li>
 						<li><a href="#news">Help</a></li>
 						<li><a href="#about">About</a></li>
 					</ul>
@@ -36,7 +36,7 @@
 					<input type="hidden" name="hiddenEntry" value="<?php echo htmlspecialchars($search); ?>">
 					<input type="hidden" name="offsetValue" value="<?php echo htmlspecialchars($offset); ?>";>
 					<input type="submit" name="page" class="pageButton" value="next">
-					<input type="submit" name="page" class="pageButton" value="previous">
+					<input type="submit" name="page" class="pageButton" value="previous" id="previousButton">
 				</form>
 			</div>
 		</div>
