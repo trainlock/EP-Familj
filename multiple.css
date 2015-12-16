@@ -111,7 +111,7 @@ Huvudsida*/
 	width: 25vw;
 	height: 3vh;
 	min-width: 340px;
-	min-height: 20px;
+	min-height: 30px;
 	margin: 0 auto;
 	font-size: 20px;
 	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
@@ -156,11 +156,11 @@ Huvudsida*/
 }
 
 /*För att inte visa båda textfälten samtidigt*/
-#largePlaceholder{
+#largePlaceHolder{
 	display: inline-block;
 }
 
-#smallPlaceholder{
+#smallPlaceHolder{
 	display: none;
 }
 
@@ -241,11 +241,11 @@ Huvudsida*/
 		width: 100%;
 	}
 	
-	#largePlaceholder{
+	#largePlaceHolder{
 	display: none;
 	}
 
-	#smallPlaceholder{
+	#smallPlaceHolder{
 		display: inline-block;
 	}
 }
