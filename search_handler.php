@@ -2,10 +2,12 @@
 	$OFFSET_NR = 12;
 	$search = "";
 	$offset = 0;
+	// Antalet chars som skrivs ut i varje bits namn
+	$charsInNameDisplayed = 40;
 	
-	if(isset($_POST['hiddenEntry'])) {
-		$search = $_POST['hiddenEntry'];
-	}
+	// Koppla upp mot databasen                               
+	mysql_connect("mysql.itn.liu.se","lego");              
+	mysql_select_db("lego");
 	
 	// $offset bestämmer från vilken rad databasen ska läsas in i $resultat
 	// första gången sökresultatet visas så är offset 0, annars tilldelas den $_POST['offset']
@@ -13,9 +15,19 @@
 		$offset = $_POST['offsetValue'];
 	}
 	
-	// Koppla upp mot databasen                               
-	mysql_connect("mysql.itn.liu.se","lego");              
-	mysql_select_db("lego");
+	// Kolla om sökning gjorts från sidan
+	if($_POST['searchWord'] != ""){
+		$search = $_POST['searchWord'];
+		
+		// Skriv över offsetvärdet så förstasidan för nya sökningen visas
+		$offset = 0;
+	}
+	
+	// Om ingen sökning gjorts
+	else if(isset($_POST['hiddenEntry'])) {
+		$search = $_POST['hiddenEntry'];
+	}
+	
 	$limit = $OFFSET_NR+1;
 	
 	if($search == "")
@@ -30,11 +42,6 @@
 		$searchEntry = $search;
 	}
 	
-	/*if($searchEntry == "") {
-		echo 'Inget sökresultat';
-		//echo '<script>goToErrorPage();</script>';
-	}*/
-	
 		
 	if(!isset($_POST['page']))
 		$_POST['page'] = "";
@@ -42,10 +49,7 @@
 		$offset += $OFFSET_NR;
 	else if($_POST['page'] === "previous")
 	{
-		//if($_POST['offsetValue'] == 0)
-			//echo "<script>blurButton('previousButton');</script>";
-		//else
-			if($_POST['offsetValue'] != 0)
+		if($_POST['offsetValue'] != 0)
 			$offset -= $OFFSET_NR;
 	}
 	
@@ -61,9 +65,9 @@
 							");
 	
 	// Skriv ut alla poster i svaret 
-	// Det här bör skicka vidare till errorsidan om inga resultat fås
 	
-	if(mysql_num_rows($result) === 0 && $offset == 0){
+	// Skicka vidare till errorsidan om inga resultat fås
+	if(mysql_num_rows($result) === 0){
 		echo '<script>goToErrorPage();</script>';
 	}
 	else{
@@ -90,8 +94,8 @@
 					echo 'No image found.'; 
 				
 				// Kapa namnet om det är för långt så inte allt skrivs ut
-				if(strlen($partName) > 40){
-					$partName = substr($partName, 0, 40) . "...";
+				if(strlen($partName) > $charsInNameDisplayed){
+					$partName = substr($partName, 0, $charsInNameDisplayed) . "...";
 				}
 				
 				print("<p>$partName<br>Part-ID: $partID</p>");                           		
