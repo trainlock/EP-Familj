@@ -495,4 +495,10 @@ Sökresultat*/
 	}
 }
 
+@media screen and (max-width: 400px){
+	.legoBox:hover{
+		transform: scale(1.1);
+	}
+}
+
 
