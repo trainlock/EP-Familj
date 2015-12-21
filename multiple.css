@@ -447,13 +447,12 @@ Sökresultat*/
 	box-shadow: 4.5px 7.5px 0 #888888;*/
 }
 
-.hiddenPartId{
-	opacity: 0;
+.searchResultContainer{
+	height: 100%;
 }
 
-.visiblePartId{
-	margin-top: 0;
-	opacity: 1;
+.buttonDiv{
+	margin: 0 auto 6vh 80%;
 }
 
 @media screen and (max-width: 1320px){

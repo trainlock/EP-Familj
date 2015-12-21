@@ -72,6 +72,8 @@
 	}
 	else{
 		$rowCounter = 0;
+		
+		print("<div class='searchResultContainer'>");
 	
 		while($row = mysql_fetch_array($result)) {
 			if($rowCounter < $OFFSET_NR) {
@@ -107,6 +109,7 @@
 				$search = $searchEntry;
 			}
 		} 
+		print("</div>");
 		
 		// Kolla om det finns resultat på nästa sida
 		$offsetNextPage = $offset + 12;
