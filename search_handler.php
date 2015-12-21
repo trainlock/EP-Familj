@@ -17,7 +17,7 @@
 	
 	// Kolla om sökning gjorts från sidan
 	if($_POST['searchWord'] != ""){
-		$search = $_POST['searchWord'];
+		$search = mysql_real_escape_string($_POST['searchWord']);
 		
 		// Skriv över offsetvärdet så förstasidan för nya sökningen visas
 		$offset = 0;
