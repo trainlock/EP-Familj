@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="script.js"></script></head>           
-	<body onload="blurButton('previousButton')">       
+	<body onload="blurPreviousButton('previousButton'); blurNextButton('nextButton')">       
 	<div class="centerWrapper">
 		
 		 <!--Huvuddelen av sidan, absolut så den täcker hela sidans höjd-->
@@ -35,6 +35,7 @@
 				<form method="post" action="search.php">
 					<input type="hidden" name="hiddenEntry" value="<?php echo htmlspecialchars($search); ?>">
 					<input type="hidden" name="offsetValue" value="<?php echo htmlspecialchars($offset); ?>" id="offsetValue">
+					<input type="hidden" name="ContentOnNextPage" value="<?php echo htmlspecialchars($contentOnNextPage); ?>" id="contentOnNextPage">
 					<input type="submit" name="page" class="pageButton" value="previous" id="previousButton">
 					<input type="submit" name="page" class="pageButton" value="next" id="nextButton">
 				</form>

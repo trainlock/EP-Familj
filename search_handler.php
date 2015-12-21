@@ -63,7 +63,7 @@
 	// Skriv ut alla poster i svaret 
 	// Det här bör skicka vidare till errorsidan om inga resultat fås
 	
-	if(mysql_num_rows($result) === 0){
+	if(mysql_num_rows($result) === 0 && $offset == 0){
 		echo '<script>goToErrorPage();</script>';
 	}
 	else{
@@ -89,14 +89,35 @@
 				else 
 					echo 'No image found.'; 
 				
+				// Kapa namnet om det är för långt så inte allt skrivs ut
+				if(strlen($partName) > 40){
+					$partName = substr($partName, 0, 40) . "...";
+				}
+				
 				print("<p>$partName<br>Part-ID: $partID</p>");                           		
 				print("</div></div>");
 				
 				$rowCounter += 1;
-			}
+			} // end while
 			else {
 				$search = $searchEntry;
 			}
-		} // end while
+		} 
+		
+		// Kolla om det finns resultat på nästa sida
+		$offsetNextPage = $offset + 12;
+		
+		$nextPage = mysql_query("SELECT parts.Partname, parts.PartID, images.colorID, images.has_gif, images.has_jpg, images.itemtypeID
+							FROM parts
+								INNER JOIN images
+									ON parts.PartID=images.itemID
+							WHERE parts.Partname LIKE '%$searchEntry%' 
+							OR parts.PartID LIKE '%$searchEntry%'
+							LIMIT 1 OFFSET $offsetNextPage;
+							");
+		if(mysql_num_rows($nextPage) === 0){
+			$contentOnNextPage = "false";
+		}					
+		
 	}
 ?>

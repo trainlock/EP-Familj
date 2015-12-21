@@ -113,18 +113,40 @@ function checkOffset(){
 	return pageOffset;
 }
 
-function blurButton(buttonID){
+function checkContentNextPage(){
+	var contentOnPage = document.getElementById('contentOnNextPage').value;
+
+	if(contentOnPage == 'false')
+		return false;
+	
+	return true;
+}
+
+function blurPreviousButton(buttonID){
 	
 	var offsetValue = checkOffset();
 
-	if(offsetValue == 0){
-		var buttonElement = document.getElementById(buttonID);
+	if(offsetValue == 0)
+		blurButton(buttonID);
+}
+
+function blurNextButton(buttonID){
+	
+	var contentOnPage = checkContentNextPage();
+	
+	if(!contentOnPage)
+		blurButton(buttonID);
+	
+	
+}
+
+function blurButton(buttonID){
+	var buttonElement = document.getElementById(buttonID);
 		
-		// Ändra färg på text
-		buttonElement.style.color = "#B3BABD";
+	// Ändra färg på text
+	buttonElement.style.color = "#B3BABD";
 		
-		// Deaktivera knappen
-		buttonElement.disabled = "true";
-	}
+	// Deaktivera knappen
+	buttonElement.disabled = "true";
 }
 
