@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewport">
 		<title>sida1</title>
 		<link rel="stylesheet" type="text/css" href="multiple.css">
 		<script src="script.js"></script>
 	</head>
-	<body onload="focusTextField()">
+	<body onload="focusTextFieldOnLoad()" onclick="resetTextFieldCentering()">
 	<div class="centerWrapper">
 		<div class="centerDiv">
 			<div class="logo">
@@ -27,11 +27,12 @@
 					<p>Welcome. Search for lego part.</p>
 				</div>
 				
-				<div class="searchContainer">
+				<div class="searchContainer" id="formContainer">
 						<form action="search.php" method="post">
 							<!--Mer utförlig placeholder för större fönster-->
 							<input class="searchBox" placeholder="Search piece name or id" 
-							type="text" id="largePlaceHolder" name="searchWord">
+							type="text" id="largePlaceHolder" name="searchWord"
+							onfocus="centerTextFieldOnMobile()">
 							<!--Kortare placeholder för mindre fönster, ändras vi fönsterbredd 400px-->
 							<input class="searchBox" placeholder="Search piece" 
 							type="text" id="smallPlaceHolder" name="searchWordShort">
