@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="helpAnimation.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>help</title>
+		<link rel="stylesheet" type="text/css" href="multiple.css">
+		<link rel="stylesheet" type="text/css" href="help.css">
+	</head>
+	<body onload="determineIfAnimationPlayable()">
+		<div class="centerWrapper">
+			<div class="centerDiv" id="pageCenterDiv">
+				<div class="logo">
+					<h1>LegoWars</h1>
+					<div class="menuContainer">
+						<ul>
+						  <li><a href="#home">Search</a></li>
+						  <li><a class="active" href="#news">Help</a></li>
+						  <li><a href="#about">About</a></li>
+						</ul>
+					</div>
+					<div class="topSearchBar">
+						<form action="search.php" method="post">
+							<input id="searchIcon" type="image" src="images/magnify.gif"></input>
+							<input class="topSearchBox" placeholder="Search piece" 
+							type="text" name="searchWord">
+					</div>
+				</div>
+				<div id="animationContainer">
+				</div>
+				<div id="animationButtonContainer">
+					<button type="button" onclick="playAnimation()" id="startAnimationButton">Start Demo</button>
+				</div>
+				<div id="windowTooSmallWarning">
+					Please Note: Your browser window is currently too small to display the animation, please expand 
+					it in order to view the demo
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

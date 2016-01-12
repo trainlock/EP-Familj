@@ -1,0 +1,227 @@
+#animationContainer	{
+	width: 0px;
+	height: 0px;
+	background-color: #000000; 	
+	margin: 0 auto;
+	box-shadow: 2px 2px 8px #888888;
+}
+
+#animationBody{
+	background: url("images/lego-background-seamless.jpg");
+	height: 100%;
+	width: 0;
+	margin: auto;
+}
+
+#animationCenterWrapper{
+	position: relative;
+	width: 70%;
+	height: 100%;
+	margin: 1px auto;
+}
+
+#animationCenterDiv{
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/*font-size: 10px;*/
+}
+
+
+#animationLogo{
+	height: 15%;
+	width: 100%;
+	background-color: #cccccc;
+	text-align: center;
+	color: #ffffff;
+	padding-top: 3%;
+	border-bottom: solid #181818 3px;
+	overflow: hidden;
+}
+
+#animationH2{
+	margin: 0;
+	color: #FFFFFF;
+	font-size:30px;
+	text-shadow: 0 2px 0 #181818;
+}
+
+#animationH3{
+	font-size: 15px;
+}
+
+#animationMenuContainer{
+	position: absolute;
+	top: 13.5%;
+}
+
+#animationMenuList{
+	display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	font-size: 8px;
+}
+
+.animationMenu{
+	background-color: #FFFFFF;
+	color: #D8D8D8;
+	padding: 4px 4px;
+    display: block;
+	margin-left:2px;
+    border-top-left-radius: 6px;
+  	border-top-right-radius: 6px;
+  	text-align: center;
+  	text-decoration: none;
+}
+
+#animationLi1{
+	background-color: #181818;
+}
+
+#animationTextContainer{
+	width: 43%;
+	background-color: blue;
+	margin: 15% auto 0 auto;
+	font-size: 8px;
+}
+
+#animationSearchContainer{
+	width: 40%;
+	height: 18%;
+	margin: 0 auto;
+	text-align: center;	
+}
+
+#animationInputField{
+	width: 98%;
+	height: 10px;
+	font-size: 8px;
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	box-shadow:0px 1px 1px 1px #e5e5e5;
+	font-family: Cambria, Cochin, Georgia, serif;
+	text-indent: 16px;
+	background: url("images/animation/magnify_small.gif") no-repeat scroll 2px 2px;
+	padding-top: 2px;
+}
+
+#animationSearchButton{
+	color: #000000;
+	border: 1px solid #B1BFC4;
+	font-size: 6px;
+	float: left;
+	margin-left: 36%;
+	margin-top: 3px;
+}
+
+#animationHelpIcon{
+	height: 11px;
+	width: 11px;
+	background-color: #C2D4A1;
+	border-radius: 50%;
+	margin: 3.5px 0 0 6px;
+	float: left;
+	cursor: default;
+	background: radial-gradient(circle at 4px 4px, #C2D4A1, #000000);
+	padding: 1px 1px 0 0;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: 500;
+	font-size: 8px;
+}
+
+#animationMouse{
+	position: absolute;
+	height: 15px;
+	width: 10px;
+	background: url("images/animation/cursor.png") no-repeat scroll 0;
+	top: 268px;
+	left: 350px;
+}
+
+#animationTopSearchBar{
+	position: absolute;
+	margin-bottom: 4px;
+	right: 4px;
+	min-width: 100px;
+}
+
+#animationTopSearchField{
+	background-color: #FFFFFF;
+	box-shadow:0px 1px 1px 1px #e5e5e5;
+	font-family: Cambria, Cochin, Georgia, serif;
+	padding: 1px;
+	text-indent: 4px;
+	font-size: 8px;
+}
+
+#animationTopMagnifyDiv{
+	position: absolute;
+	top: 10px;
+	right: 6px;
+}
+
+#animationLegoBoxContainer{
+	float: left;
+	height: 27%;
+	width: 33.2%;
+}
+
+#animationLegoBox{
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	border: 1px solid #000000;
+	margin: 20px auto;
+	border-radius: 12px;
+	box-shadow: 3px 5px 0 #888888;
+	font-size: 8px;
+	font-weight: 100;
+}
+
+.animationSinglePageText{
+	font-size: 10px;
+}
+
+table{
+	border: 1px solid #888888;
+}
+
+td, th{
+	border: 1px solid #888888;
+}
+
+#windowTooSmallWarning{
+	padding: 4px;
+	width: 30%;
+	border: 1px solid #000000;
+	background-color: yellow;
+	font-size: 12px;
+	margin-left: 4px;
+	overflow: hidden;
+	opacity: 0;
+	margin-top: 4px;
+	float: left;
+}
+
+#startAnimationButton{
+}
+
+#animationButtonContainer{
+	float: left;
+	margin-top: 4px;
+	height: 23px;
+	width: 89px;
+}
+
+.animationButtonContainer{
+	margin: 0 auto;
+	height: 120px;
+	width: 50%;
+	max-width: 300px;
+	padding-top: 4px;
+}
+
+
+
+
