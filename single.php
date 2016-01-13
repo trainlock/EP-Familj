@@ -94,6 +94,7 @@
 									echo 'No image found.';
 								
 								print("<p>colorname = $colorName</p>");
+								print("<p>partID = $partID</p>");
 							}
 							
 							// Ställ frågan    
@@ -109,6 +110,10 @@
 													
 
 							print('<table id="setTable" border="1">');
+							
+							print("<tr>
+									Color
+									</tr>");
 							
 							print("<th>
 									Alla set som finns
