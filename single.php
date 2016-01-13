@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Multiple options</title>
+		<title>Lego piece</title>
 		<link href="multiple.css" rel="stylesheet" type="text/css">
 		<meta charset="utf-8">
 		<script src="multiple.js"></script>
@@ -20,7 +20,7 @@
 					<div class="menuContainer">
 						<ul>
 							<li><a class="active" href="start.html">Search</a></li>
-							<li><a href="#news">Help</a></li>
+							<li><a href="#help.html">Help</a></li>
 							<li><a href="#about">About</a></li>
 						</ul>
 					</div>
@@ -34,7 +34,6 @@
 				</div>
 				
 				<div class="singleContent">
-
 						<?php
 							// Koppla upp mot databasen                               
 							mysql_connect("mysql.itn.liu.se","lego") or die ("Ooops! Something went wrong :P");              
@@ -65,7 +64,6 @@
 													AND colors.ColorID = '$colorID'
 													LIMIT 1");
 													
-							print("<div class='singleContent'>");
 							
 							while ($baby_row = mysql_fetch_array($content)) {
 								$partName= $baby_row['Partname'];
@@ -92,11 +90,7 @@
 									echo '<img src="http://webstaff.itn.liu.se/~stegu/img.bricklink.com/' , $itemtypeID, '/', $colorID, '/', $partID, '.jpg">'; 
 								else 
 									echo 'No image found.';
-								
-								print("<p>colorname = $colorName</p>");
-								print("<p>partID = $partID</p>");
 							}
-							
 							// Ställ frågan    
 							$result = mysql_query("SELECT sets.Setname
 													FROM parts
@@ -108,31 +102,24 @@
 													LIMIT 10;
 													");
 													
-
 							print('<table id="setTable" border="1">');
 							
 							print("<tr>
-									Color
-									</tr>");
-							
-							print("<th>
-									Alla set som finns
-									</th>");
-							
-							// Skriv ut alla poster i svaret                          
-							while ($row = mysql_fetch_array($result)) {
-								
+									<tr>
+									<td><h3>ID</h3>$partID</td>
+									</tr>
+									<td><h3>Color</h3>$colorName</td>
+									</tr>
+									<tr>
+									<td><h3>Sets</h3>");
+							// Skriv ut alla poster i svaret
+							while ($row = mysql_fetch_array($result)) {	
 								$setName = $row["Setname"];
-							
-								
-								print("<tr>
-									<td>$setName</td>
-									</tr>");
-									
+								print("• $setName<br>");
 							} // end while
-							
+							print("</td>
+									</tr>");
 							print("</table>");
-							print("</div>");
 						?>
 				</div>
 			</div>

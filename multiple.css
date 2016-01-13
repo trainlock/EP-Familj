@@ -507,6 +507,7 @@ Sökresultat*/
 	position: relative;
 	margin: 10vw auto;
 	text-align: center;
+	margin-top:2vw;
 }
  
 #setTable{
@@ -516,17 +517,24 @@ Sökresultat*/
 	border: 1px solid black;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
+
 }
 
-th, td{
+h2{
+	font-size:25px;
+}
+
+
+h3{
+	margin-top:0;
+	margin-bottom:1px;
+	text-align:left;
+	font-size:18px;
+}
+
+
+td{
 	width: 100%;
-	padding: 2vw;
+	padding: 0.8vw;
 	border-top: 1px solid black;
-}
-
-th{
-	width: 100%;
-	background-color: #cccccc;
-	border-top: none;
-	border-radius: 6px;
 }
