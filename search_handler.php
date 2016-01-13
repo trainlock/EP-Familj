@@ -112,7 +112,7 @@
 		print("</div>");
 		
 		// Kolla om det finns resultat på nästa sida
-		$offsetNextPage = $offset + 12;
+		$offsetNextPage = $offset + $OFFSET_NR;
 		
 		$nextPage = mysql_query("SELECT parts.Partname, parts.PartID, images.colorID, images.has_gif, images.has_jpg, images.itemtypeID
 							FROM parts
