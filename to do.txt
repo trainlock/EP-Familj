@@ -6,7 +6,12 @@ Text över sökruta
 Keywords
 Flytta ned sidknappar
 Fixa sökfält/menykrock
+Gå igenom filer och ta bort bortkommenterad kod
+
 
 
 
 Se till att allt är ihopkopplat
+Ändra titlar på sidorna (sida 1, est osv.)
+Se till så att animeringen fungerar när allt är klart
+Validera kod

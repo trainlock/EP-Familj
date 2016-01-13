@@ -5,6 +5,10 @@
 	// Antalet chars som skrivs ut i varje bits namn
 	$charsInNameDisplayed = 40;
 	
+	$cookie_query_name = "query";
+	$cookie_offset_name = "offset";
+	$save_cookie_for = 86400; // == 1 dag
+	
 	// Koppla upp mot databasen                               
 	mysql_connect("mysql.itn.liu.se","lego");              
 	mysql_select_db("lego");
@@ -15,33 +19,39 @@
 		$offset = $_POST['offsetValue'];
 	}
 	
-	// Kolla om sökning gjorts från sidan
-	if($_POST['searchWord'] != ""){
-		$search = mysql_real_escape_string($_POST['searchWord']);
-		
-		// Skriv över offsetvärdet så förstasidan för nya sökningen visas
-		$offset = 0;
-	}
 	
-	// Om ingen sökning gjorts
-	else if(isset($_POST['hiddenEntry'])) {
-		$search = $_POST['hiddenEntry'];
+	if(!isset($_POST['searchWord']) && !isset($_POST['searchWordShort']) && !isset($_POST['hiddenEntry'])){
+		$searchEntry = $_COOKIE[$cookie_query_name];
+		$offset = $_COOKIE[$cookie_offset_name];
+	}
+	else{
+		// Kolla om sökning gjorts från sidan
+		if($_POST['searchWord'] != ""){
+			$search = mysql_real_escape_string($_POST['searchWord']);
+			
+			// Skriv över offsetvärdet så förstasidan för nya sökningen visas
+			$offset = 0;
+		}
+		
+		// Om ingen sökning gjorts
+		else if(isset($_POST['hiddenEntry'])) {
+			$search = $_POST['hiddenEntry'];
+		}
+		
+		if($search == "")
+		{
+			$searchEntry = mysql_real_escape_string($_POST['searchWord']);
+		
+			if($searchEntry == "") {
+				$searchEntry = mysql_real_escape_string($_POST['searchWordShort']);
+			}
+		}
+		else {
+			$searchEntry = $search;
+		}
 	}
 	
 	$limit = $OFFSET_NR+1;
-	
-	if($search == "")
-	{
-		$searchEntry = mysql_real_escape_string($_POST['searchWord']);
-	
-		if($searchEntry == "") {
-			$searchEntry = mysql_real_escape_string($_POST['searchWordShort']);
-		}
-	}
-	else {
-		$searchEntry = $search;
-	}
-	
 		
 	if(!isset($_POST['page']))
 		$_POST['page'] = "";
@@ -53,6 +63,10 @@
 			$offset -= $OFFSET_NR;
 	}
 	
+	// cookie för sökord
+	setcookie($cookie_query_name, $searchEntry, time() + $save_cookie_for, "/");
+	// cookie för offset
+	setcookie($cookie_offset_name, $offset, time() + $save_cookie_for, "/");
 	
 	// Ställ frågan    
 	$result = mysql_query("SELECT parts.Partname, parts.PartID, images.colorID, images.has_gif, images.has_jpg, images.itemtypeID
@@ -112,7 +126,7 @@
 		print("</div>");
 		
 		// Kolla om det finns resultat på nästa sida
-		$offsetNextPage = $offset + 12;
+		$offsetNextPage = $offset + $OFFSET_NR;
 		
 		$nextPage = mysql_query("SELECT parts.Partname, parts.PartID, images.colorID, images.has_gif, images.has_jpg, images.itemtypeID
 							FROM parts
