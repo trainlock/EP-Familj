@@ -7,7 +7,8 @@ body{
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-family: Myriad Pro;
+	color:#262626;
 }
 
 h1{
@@ -25,7 +26,8 @@ h1{
 
 .centerDiv{
 	background-color: rgba(255,255,255,0.8);
-	border: 5px solid white;
+	border-left: 5px solid #262626;
+	border-right: 5px solid #262626;
 	
 	/*Täck hela sidan*/
 	position: fixed;
@@ -43,14 +45,24 @@ h1{
 	min-height: 120px;
 	width: 100%;
 	min-width: 284px;
-	background-color: rgba(255,255,255,0.8);
+	padding-top:1vw;
+	background-color: rgba(255,255,255,1);
 	text-align: center;
 	color: #ffffff;
-	padding-top: 3vw;
-	border-bottom: solid #181818 3px;
+	border-bottom: solid #262626 5px;
 	position: relative;
 }
 
+#imgLogo{
+	margin: 0 auto;
+	height: 75%;
+	
+}
+
+#imgLogotyp{
+	height: 100%;
+	width: auto;
+}
 
 .menuContainer{
 	position: absolute;
@@ -71,8 +83,8 @@ li {
 }
 
 li a {
-    background-color: #FFFFFF;
-	color: #D8D8D8;
+    background-color: #d9d9d9;
+	color: #262626;
     height: 16px;
     padding: 10px 10px;
     display: block;
@@ -84,11 +96,12 @@ li a {
 }
 
 li a:hover{
-	background-color:#FFFF00;
+	background-color:#ffff8c;
 }
 
 .active{
-	background-color: #181818;
+	background-color: #262626;
+	color: #d9d9d9;
 }
 
 /* -----------------------------------------------------------
@@ -96,7 +109,6 @@ Huvudsida*/
 
 .textContainer{
 	width: 30vw;
-	background-color: blue;
 	margin: 15vh auto 1vh auto;
 }
 
@@ -208,6 +220,7 @@ Huvudsida*/
 
 
 @media screen and (max-width: 400px){
+	
 	.searchContainer{
 		width: 60%;
 		min-width: 160px;	
