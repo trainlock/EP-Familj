@@ -44,6 +44,10 @@
 		
 			if($searchEntry == "") {
 				$searchEntry = mysql_real_escape_string($_POST['searchWordShort']);
+				
+				if($searchEntry == ""){
+					echo '<script>goToErrorPage();</script>';
+				}
 			}
 		}
 		else {

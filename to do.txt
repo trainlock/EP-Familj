@@ -2,7 +2,7 @@ Skriva help
 Layout på help
 Skriva about
 Rubrik & namn
-Text över sökruta
+Ändra texten ovanför sökruta
 Keywords
 Flytta ned sidknappar
 Fixa sökfält/menykrock
