@@ -20,7 +20,7 @@
 					<div class="menuContainer">
 						<ul>
 							<li><a class="active" href="start.html">Search</a></li>
-							<li><a href="help.html">Help</a></li>
+							<li><a href="#news">Help</a></li>
 							<li><a href="#about">About</a></li>
 						</ul>
 					</div>
