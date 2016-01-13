@@ -2,7 +2,7 @@
 Alla*/
 
 body{
-	background: url("images/lego-background-seamless.jpg");
+	background: url("images/commons-copy.jpg");
 	background-color: #cccccc;
 	margin: 0;
 	padding: 0;
@@ -20,11 +20,12 @@ h1{
 .centerWrapper{
 	position: relative;
 	width: 70vw;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
 .centerDiv{
-	background-color: #FFFFFF;
+	background-color: rgba(255,255,255,0.8);
+	border: 5px solid white;
 	
 	/*Täck hela sidan*/
 	position: fixed;
@@ -42,7 +43,7 @@ h1{
 	min-height: 120px;
 	width: 100%;
 	min-width: 284px;
-	background-color: #cccccc;
+	background-color: rgba(255,255,255,0.8);
 	text-align: center;
 	color: #ffffff;
 	padding-top: 3vw;
@@ -428,7 +429,7 @@ Sökresultat*/
 	min-height: 180px;
 	min-width: 180px;
 	text-align: center;
-	border: 2px solid #000000;
+	border: 2px solid #3e5b54;
 	margin: 4vw auto;
 	border-radius: 12px;
 	box-shadow: 3px 5px 0 #888888;
