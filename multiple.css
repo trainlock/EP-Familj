@@ -60,8 +60,13 @@ h1{
 }
 
 #imgLogotyp{
-	height: 100%;
-	width: auto;
+	height: 18vw;
+	width: 55vw;
+	max-width: 466px;
+	max-height: 120px;
+	min-width: 204px;
+	min-height: 72px;
+	
 }
 
 .menuContainer{
@@ -238,8 +243,8 @@ h2{
 #searchIcon{
 	position: absolute;
 	display: block;
-	left: 164px;
-	top: 6px;
+	right: 20px;
+	bottom: 4px;
 	width: 20px;
 	height: 18px;
 }
@@ -253,14 +258,16 @@ errorsida*/
 
 .errorContainer{
 	width: 44%;
-	height: 50%;
 	min-height: 320px;
 	font-size:30px;
 	margin: 15vh auto 1vh auto;
 }
 
 .headerContainer{
-	background-color: yellow;
+	background-color: #ffff8c;
+	padding: 1px;
+	text-align: center;
+	border-radius: 4px;
 }
 
 
@@ -344,7 +351,24 @@ td{
 
 /* ---------------------------------------- Help / about ------------------------------------------ */
 
+#windowTooSmallWarning{
+	padding: 4px;
+	width: 30vw;
+	border: 1px solid #000000;
+	background-color: #ffff8c;
+	font-size: 12px;
+	margin-left: 96px;
+	opacity: 0;
+	margin-top: -21px;
+	border-radius: 4px;
+}
 
+#animationButtonContainer{
+	padding-top: 12px;
+	height: 21px;
+	width: 83px;
+	margin: 0 auto;
+}
 
 /* ---------------------------------------- @media ------------------------------------------ */
 
@@ -404,6 +428,9 @@ td{
 	#smallPlaceHolder{
 		display: inline-block;
 	}
+	#animationButtonContainer{
+		
+	}
 }
 
 /* Bättre att flytta pratbubblan vid max-height: 335px? 545*/
@@ -457,6 +484,10 @@ td{
 		margin-top: -218px;
 	}
 	
+	#imgLogotyp{
+		height: 76px;
+		width: 300px;
+	}
 }
 
 
@@ -512,9 +543,26 @@ td{
 	/*Alt.2 flytta ner sökfält*/
 	
 	.topSearchBar{
-		top: 140px;
+		position: fixed;
+		bottom: 0px;
+		background-color: #ffff8c;
+		width: 100%;
+		height: 36px;
+		right: 0px;
 	}
-		
+	
+	.topSearchBox{
+		right: 18px;
+		position: fixed;
+		margin-top: 3px;
+	}
+	
+	#searchIcon{
+		z-index: 1;
+		bottom: 8px;
+	}
+	
+	
 }
 
 
@@ -560,6 +608,9 @@ td{
 	.infoText{
 		font-size: 16px;
 	}
+	#imgLogo{
+		padding-top: 20px;
+	}
 }
 
 @media screen and (max-height: 500px){
@@ -571,5 +622,11 @@ td{
 @media screen and (max-width: 400px){
 	.legoBox:hover{
 		transform: scale(1.1);
+	}
+}
+
+@media screen and (max-width: 290px){
+	.topSearchBar{
+		bottom: 16px;
 	}
 }

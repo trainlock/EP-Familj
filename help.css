@@ -191,37 +191,6 @@ td, th{
 	border: 1px solid #888888;
 }
 
-#windowTooSmallWarning{
-	padding: 4px;
-	width: 30%;
-	border: 1px solid #000000;
-	background-color: yellow;
-	font-size: 12px;
-	margin-left: 4px;
-	overflow: hidden;
-	opacity: 0;
-	margin-top: 4px;
-	float: left;
-}
-
-#startAnimationButton{
-}
-
-#animationButtonContainer{
-	float: left;
-	margin-top: 4px;
-	height: 23px;
-	width: 89px;
-}
-
-.animationButtonContainer{
-	margin: 0 auto;
-	height: 120px;
-	width: 50%;
-	max-width: 300px;
-	padding-top: 4px;
-}
-
 
 
 
