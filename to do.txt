@@ -1,11 +1,11 @@
-Skriva help
-Layout på help
-Skriva about
+﻿OK - Skriva help
+OK - Layout på help
+OK - Skriva about
 Rubrik & namn
-Ändra texten ovanför sökruta
-Keywords
+OK - Ändra texten ovanför sökruta
+OK - Keywords
 Flytta ned sidknappar
-Fixa sökfält/menykrock
+OK - Fixa sökfält/menykrock
 Gå igenom filer och ta bort bortkommenterad kod
 
 
