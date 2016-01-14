@@ -488,6 +488,37 @@ td{
 		height: 76px;
 		width: 300px;
 	}
+	
+	h2{
+		font-size: 24px;
+	}
+	.infoText{
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-height: 545px) and (max-width: 900px){
+	.topSearchBar{
+		position: fixed;
+		bottom: 0px;
+		background-color: #ffff8c;
+		height: 36px;
+		right: 12px;
+		left: 16px;
+		border-radius: 4px;
+	}
+	
+	.topSearchBox{
+		right: 18px;
+		position: absolute;
+		margin-top: 3px;
+	}
+	
+	#searchIcon{
+		z-index: 1;
+		bottom: 8px;
+		right: 25px;
+	}
 }
 
 
@@ -551,20 +582,22 @@ td{
 		position: fixed;
 		bottom: 0px;
 		background-color: #ffff8c;
-		width: 98%;
 		height: 36px;
-		right: 0px;
+		right: 12px;
+		left: 16px;
+		border-radius: 4px;
 	}
 	
 	.topSearchBox{
 		right: 18px;
-		position: fixed;
+		position: absolute;
 		margin-top: 3px;
 	}
 	
 	#searchIcon{
 		z-index: 1;
 		bottom: 8px;
+		right: 25px;
 	}
 	
 	
@@ -614,9 +647,6 @@ td{
 	.infoText{
 		font-size: 16px;
 	}
-	#imgLogo{
-		padding-top: 20px;
-	}
 	
 	#animationButtonContainer{
 		width: 65%;
@@ -640,4 +670,12 @@ td{
 	.topSearchBar{
 		bottom: 16px;
 	}
+}
+
+@media screen and (max-width: 850px) and (max-height:850px){
+	#imgLogotyp{
+		height: 76px;
+		width: 300px;
+	}
+	
 }
