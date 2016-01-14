@@ -209,6 +209,147 @@ Huvudsida*/
 	border-color: transparent transparent #FFFFFF #FFFFFF;
 }
 
+/*---------------------------------------------------------------------------------
+Alla utom första*/
+
+h2{
+	font-size: 32px;
+}
+
+.infoText{
+	font-size: 24px;
+}
+
+.topSearchBar{
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+	min-width: 208px;
+}
+
+.topSearchBox{
+	height: 20px;
+	box-shadow:0px 1px 1px 1px #e5e5e5;
+	font-family: Cambria, Cochin, Georgia, serif;
+	padding: 2px;
+	text-indent: 4px;
+}
+
+#searchIcon{
+	position: absolute;
+	display: block;
+	left: 164px;
+	top: 6px;
+	width: 20px;
+	height: 18px;
+}
+
+/*----------------------------------------------------------------------------------
+errorsida*/
+
+.dottedList{
+	list-style-type: circle;
+}
+
+.errorContainer{
+	width: 44%;
+	height: 50%;
+	min-height: 320px;
+	font-size:30px;
+	margin: 15vh auto 1vh auto;
+}
+
+.headerContainer{
+	background-color: yellow;
+}
+
+
+/* -------------------------------------------------------------------------
+Sökresultat*/
+
+.legoBoxContainer{
+	float: left;
+	height: 27%;
+	width: 33.2%; /*33.2*/
+	min-height: 268px;
+	min-width: 268px;
+}
+
+.legoBox{
+	height: 11vw;
+	width: 11vw;
+	min-height: 180px;
+	min-width: 180px;
+	text-align: center;
+	border: 2px solid #3e5b54;
+	margin: 4vw auto;
+	border-radius: 12px;
+	box-shadow: 3px 5px 0 #888888;
+	cursor: pointer;
+	
+	/*Inte nödvändigt*/
+	background-color: #FFFFFF;
+}
+
+.legoBox:hover{
+	transform: scale(1.5);
+	/*height: 15vw;
+	width: 15vw;
+	margin: 5.95vh auto;
+	font-size: 24px;
+	box-shadow: 4.5px 7.5px 0 #888888;*/
+}
+
+.searchResultContainer{
+	height: 100%;
+}
+
+.buttonDiv{
+	margin: 0 auto 6vh 80%;
+}
+
+/* ---------------------------------------- Ett resultat ------------------------------------------ */
+.singleContent{
+	width: 50%;
+	position: relative;
+	margin: 10vw auto;
+	text-align: center;
+	margin-top:2vw;
+}
+ 
+#setTable{
+	margin-top: 5vw;
+	width: 100%;
+	border-collapse: separate;
+	border: 1px solid black;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+
+}
+
+h3{
+	margin-top:0;
+	margin-bottom:1px;
+	text-align:left;
+	font-size:18px;
+}
+
+
+td{
+	width: 100%;
+	padding: 0.8vw;
+	border-top: 1px solid black;
+}
+
+
+/* ---------------------------------------- Help / about ------------------------------------------ */
+
+
+
+/* ---------------------------------------- @media ------------------------------------------ */
+
+/* ---------------------------------------- Huvudsida ------------------------------------------ */
+
 @media screen and (min-width: 400px) and (min-height: 545px){
 	.speechBubble:before{
 	top: -57px;
@@ -343,34 +484,7 @@ Huvudsida*/
 	}
 }
 
-
-/*---------------------------------------------------------------------------------
-Alla utom första*/
-
-.topSearchBar{
-	position: absolute;
-	bottom: 4px;
-	right: 4px;
-	min-width: 208px;
-}
-
-.topSearchBox{
-	height: 20px;
-	box-shadow:0px 1px 1px 1px #e5e5e5;
-	font-family: Cambria, Cochin, Georgia, serif;
-	padding: 2px;
-	text-indent: 4px;
-}
-
-#searchIcon{
-	position: absolute;
-	display: block;
-	left: 164px;
-	top: 6px;
-	width: 20px;
-	height: 18px;
-}
-
+/* ----------------------------------------- Alla utom första -----------------------------------------*/
 
 @media screen and (max-width: 425px){
 	/*Alt.1 Flytta ner menyn så den inte krockar med sökfältet*/
@@ -404,70 +518,7 @@ Alla utom första*/
 }
 
 
-
-/*----------------------------------------------------------------------------------
-errorsida*/
-
-.dottedList{
-	list-style-type: circle;
-}
-
-.errorContainer{
-	width: 44%;
-	height: 50%;
-	min-height: 320px;
-	font-size:30px;
-	margin: 15vh auto 1vh auto;
-}
-
-.headerContainer{
-	background-color: yellow;
-}
-
-
-/* -------------------------------------------------------------------------
-Sökresultat*/
-
-.legoBoxContainer{
-	float: left;
-	height: 27%;
-	width: 33.2%; /*33.2*/
-	min-height: 268px;
-	min-width: 268px;
-}
-
-.legoBox{
-	height: 11vw;
-	width: 11vw;
-	min-height: 180px;
-	min-width: 180px;
-	text-align: center;
-	border: 2px solid #3e5b54;
-	margin: 4vw auto;
-	border-radius: 12px;
-	box-shadow: 3px 5px 0 #888888;
-	cursor: pointer;
-	
-	/*Inte nödvändigt*/
-	background-color: #FFFFFF;
-}
-
-.legoBox:hover{
-	transform: scale(1.5);
-	/*height: 15vw;
-	width: 15vw;
-	margin: 5.95vh auto;
-	font-size: 24px;
-	box-shadow: 4.5px 7.5px 0 #888888;*/
-}
-
-.searchResultContainer{
-	height: 100%;
-}
-
-.buttonDiv{
-	margin: 0 auto 6vh 80%;
-}
+/* ------------------------------------- Sökresultat -------------------------------------------*/
 
 @media screen and (max-width: 1320px){
 	.centerWrapper{
@@ -500,6 +551,15 @@ Sökresultat*/
 	.legoBoxContainer{
 		width: 100%;
 	}
+	.errorContainer{
+		width: 65%;
+	}
+	h2{
+		font-size: 24px;
+	}
+	.infoText{
+		font-size: 16px;
+	}
 }
 
 @media screen and (max-height: 500px){
@@ -512,43 +572,4 @@ Sökresultat*/
 	.legoBox:hover{
 		transform: scale(1.1);
 	}
-}
-
-
-/* ---------------------------------------- Ett resultat ------------------------------------------ */
-.singleContent{
-	width: 50%;
-	position: relative;
-	margin: 10vw auto;
-	text-align: center;
-	margin-top:2vw;
-}
- 
-#setTable{
-	margin-top: 5vw;
-	width: 100%;
-	border-collapse: separate;
-	border: 1px solid black;
-	border-radius: 6px;
-	-moz-border-radius: 6px;
-
-}
-
-h2{
-	font-size:25px;
-}
-
-
-h3{
-	margin-top:0;
-	margin-bottom:1px;
-	text-align:left;
-	font-size:18px;
-}
-
-
-td{
-	width: 100%;
-	padding: 0.8vw;
-	border-top: 1px solid black;
 }
