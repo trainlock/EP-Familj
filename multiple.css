@@ -428,9 +428,6 @@ td{
 	#smallPlaceHolder{
 		display: inline-block;
 	}
-	#animationButtonContainer{
-		
-	}
 }
 
 /* Bättre att flytta pratbubblan vid max-height: 335px? 545*/
@@ -513,6 +510,11 @@ td{
 		margin-left: 26%;
 		width: 180px;
 	}
+	
+	#animationButtonContainer{
+		width: 65%;
+		min-width: 185px;
+	}
 }
 
 /* ----------------------------------------- Alla utom första -----------------------------------------*/
@@ -546,7 +548,7 @@ td{
 		position: fixed;
 		bottom: 0px;
 		background-color: #ffff8c;
-		width: 100%;
+		width: 98%;
 		height: 36px;
 		right: 0px;
 	}
@@ -601,6 +603,7 @@ td{
 	}
 	.errorContainer{
 		width: 65%;
+		min-width: 185px;
 	}
 	h2{
 		font-size: 24px;
@@ -610,6 +613,11 @@ td{
 	}
 	#imgLogo{
 		padding-top: 20px;
+	}
+	
+	#animationButtonContainer{
+		width: 65%;
+		min-width: 185px;
 	}
 }
 
