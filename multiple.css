@@ -313,8 +313,10 @@ Sökresultat*/
 }
 
 .buttonDiv{
-	margin: 0 auto 6vh 80%;
+	margin: 8vw auto 6vh 80%;
 }
+
+
 
 /* ---------------------------------------- Ett resultat ------------------------------------------ */
 .singleContent{
