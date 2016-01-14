@@ -150,3 +150,14 @@ function blurButton(buttonID){
 	buttonElement.disabled = "true";
 }
 
+// Förhindrar tom sökning
+function checkSearchFieldValue(largeFieldID, smallFieldID){
+	var largeFieldValue = document.getElementById(largeFieldID).value;
+	var smallFieldValue = document.getElementById(smallFieldID).value;
+	
+	if(largeFieldValue == ""){
+		if(smallFieldValue == ""){
+			return false;
+		}
+	}
+}
