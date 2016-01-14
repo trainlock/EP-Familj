@@ -12,12 +12,14 @@
 			
 			<!--Logga i toppen-->
 			<div class="logo">
-				<h1>LegoWars</h1>
+				<div id="imgLogo">	
+					<img src="images/logo.jpg" alt="Logotypbild" id="imgLogotyp">
+				</div>
 				<div class="menuContainer">
 					<ul>
 						<li><a class="active" href="start.html">Search</a></li>
 						<li><a href="help.html">Help</a></li>
-						<li><a href="#about">About</a></li>
+						<li><a href="about.html">About</a></li>
 					</ul>
 				</div>
 				<!--Ingen aning om det går att skicka till samma fil-->
