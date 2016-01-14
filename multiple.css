@@ -115,6 +115,7 @@ Huvudsida*/
 .textContainer{
 	width: 30vw;
 	margin: 15vh auto 1vh auto;
+	text-align: center;
 }
 
 .searchContainer{
