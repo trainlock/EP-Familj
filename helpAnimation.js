@@ -98,6 +98,8 @@ function displayAnimationContent(containerID){
 	
 	
 	addBorder(containerID);
+	
+	scrollToAnimationContainer();
 	addAnimationBody(containerID);
 	
 	changeOriginalButtonFunctionallity();
@@ -115,6 +117,17 @@ function displayAnimationContent(containerID){
 	addMouse(mouseID, parentDiv);
 	
 	moveMouseToSearchField();
+}
+
+// Scrolla så att animeringen syns
+// Sätt hash
+function scrollToAnimationContainer(){
+	location.hash = "animationContainer";
+}
+
+// Återställ hash
+function resetHash(){
+	location.hash = "";
 }
 
 // Lägg till border på container
@@ -674,7 +687,7 @@ function moveMouseLeftToSearchButton(){
 
 	var offsetLeft = getOffsetLeft(mouseID);
 	
-	if(offsetLeft > 0.365 * demoWidth){
+	if(offsetLeft > 0.36 * demoWidth){
 		
 		offsetLeft -= moveMouseAt;
 		mouse.style.left= offsetLeft + "px";
@@ -691,7 +704,7 @@ function moveMouseUpToSearchButton(mouseID){
 	
 	var offsetTop = getOffsetTop(mouseID);
 	
-	if(offsetTop > 183){
+	if(offsetTop > 178){
 		offsetTop -= moveMouseAt;
 		
 		mouse.style.top= offsetTop + "px";
@@ -1163,6 +1176,7 @@ function finalizeReset(buttonID, containerID){
 	changeButtonFunctionCall(buttonID, newFunctionName);
 	setContainerSizeToZero(containerID);
 	resetGlobalVariables();
+	resetHash();
 	
 	enableElement(buttonID);
 	animationPlaying = false;
