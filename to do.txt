@@ -1,17 +1,18 @@
 ﻿OK - Skriva help
 OK - Layout på help
 OK - Skriva about
-Rubrik & namn
+OK - Rubrik & namn
 OK - Ändra texten ovanför sökruta
 OK - Keywords
-Flytta ned sidknappar
+OK - Flytta ned sidknappar
 OK - Fixa sökfält/menykrock
+
 Gå igenom filer och ta bort bortkommenterad kod
 
 
 
 
 Se till att allt är ihopkopplat
-Ändra titlar på sidorna (sida 1, est osv.)
+Ändra titlar på sidorna (sida 1, test osv.)
 Se till så att animeringen fungerar när allt är klart
 Validera kod

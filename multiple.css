@@ -18,6 +18,24 @@ h1{
 	text-shadow: 0 3px 0 #181818;
 }
 
+.pageButton{
+	background-color: #d11717;
+	color: white;
+	height: 38px;
+	width: 125px;
+	border-radius: 10px;
+	border: solid 2px #eee;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.pageButton:hover{
+	background-color: #ff3434;
+}
+}
+
 .centerWrapper{
 	position: relative;
 	width: 70vw;
@@ -143,36 +161,39 @@ Huvudsida*/
 	background: url("images/magnify.gif") no-repeat scroll 3px 50%;
 }
 
-.searchButton{
-	font-size: 16px;
+#searchButton{
 	float: left;
-	margin-left: 40%;
+	margin-left: 30%;
 	margin-top: 6px;
 	z-index: 1;
+	width: 116px;
+	height: 34px;
 }
 
 .helpIcon{
-	height: 21px;
-	width: 21px;
+	height: 26px;
+	width: 26px;
 	background-color: #C2D4A1;
 	border-radius: 50%;
 	border: 1px solid #000000;
-	margin: 6px 0 0 12px;
+	margin: 9px 0 0 12px;
 	float: left;
 	cursor: help;
 	z-index: 1;
 	background: radial-gradient(circle at 4px 4px, #C2D4A1, #000000);
-	padding: 1px 1px 0 0;
+	padding: 2px 2px 0 0;
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 900;
+	font-size: 21px;
 }
 
 #helpContainer{
 	width: 180px;
 	height: 192px;
 	opacity: 0;
-	/*background-color: #00FF00;*/
 	margin: 52px 0 0 40%;
+	padding-top: 10px;
+	padding-left: 19px;
 }
 
 /*För att inte visa båda textfälten samtidigt*/
@@ -313,7 +334,7 @@ Sökresultat*/
 }
 
 .buttonDiv{
-	margin: 8vw auto 6vh 80%;
+	margin: 8vw auto 6vh 60%;
 }
 
 
@@ -356,13 +377,13 @@ td{
 
 #windowTooSmallWarning{
 	padding: 4px;
-	width: 30vw;
+	width: 25vw;
 	border: 1px solid #000000;
 	background-color: #ffff8c;
 	font-size: 12px;
-	margin-left: 96px;
+	margin-left: 146px;
 	opacity: 0;
-	margin-top: -21px;
+	margin-top: -37px;
 	border-radius: 4px;
 }
 
@@ -398,8 +419,18 @@ td{
 		min-width: 100%;
 	}
 	
-	.searchButton{
-		margin-left: 25%;
+	#searchButton{
+		margin-left: 21%;
+		width: 84px;
+		height: 29px;
+		font-size: 12px;
+	}
+	
+	.helpIcon{
+		height: 21px;
+		width: 21px;
+		padding: 1px 1px 0 0;
+		font-size: 17px;
 	}
 	
 	.speechBubble{
@@ -422,6 +453,8 @@ td{
 	#helpContainer{
 		margin-left: 0;
 		width: 100%;
+		padding-top: 6px;
+		padding-left: 5px;
 	}
 	
 	#largePlaceHolder{
@@ -482,6 +515,7 @@ td{
 	
 	#helpContainer{
 		margin-top: -218px;
+		padding-top: 35px;
 	}
 	
 	#imgLogotyp{
@@ -528,15 +562,15 @@ td{
 	}
 	
 	.speechBubble:before{
-		top: 132px;
+		top: 102px;
 		bottom: -30px;
-		left: 85px;		
+		left: 90px;		
 		border-color: #000000 transparent transparent #000000;
 	}
 	.speechBubble:after{
-		top: 127px;
+		top: 98px;
 		bottom: 0;
-		left: 87px;
+		left: 92px;
 		border-color: #FFFFFF transparent transparent #FFFFFF;
 	}
 	
@@ -678,4 +712,11 @@ td{
 		width: 300px;
 	}
 	
+}
+
+@media screen and (max-width: 700px){
+	.buttonDiv{
+		width: 254px;
+		margin: 8vw auto;
+	}
 }
