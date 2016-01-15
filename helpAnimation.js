@@ -213,12 +213,11 @@ function createDiv(divID, divParentID){
 function addLogo(){
 	var divID = "animationLogo";
 	var divParentID = "animationCenterDiv";
+	var logotypeID = "animationLogotype";
 	
 	createDiv(divID, divParentID);
 	
-	var header = "LegoWars"
-	
-	addH2(header, divID);
+	createDiv(logotypeID, divID);
 	
 	addMenu(divID);
 }
@@ -264,6 +263,20 @@ function addH3(header, parentID){
 	h3Header.setAttribute("id", "animationH3");
 	
 	parentDiv.appendChild(h3Header);
+}
+
+// Lägg till h4
+function addH4(header, parentDiv){
+	var h4Header = document.createElement("h4");
+	//var parentDiv = document.getElementById(parentID);
+	
+	var textContent = document.createTextNode(header);
+	
+	h4Header.appendChild(textContent);
+	
+	h4Header.setAttribute("id", "animationH4");
+	
+	parentDiv.appendChild(h4Header);
 }
 
 // Lägg till menyn i toppen
@@ -338,7 +351,7 @@ function addWelcomeText(){
 	var divID = "animationTextContainer";
 	var parentID = "animationCenterDiv";
 	
-	var textContent = "Welcome. Search for lego part.";
+	var textContent = "Welcome! Search for a lego part.";
 	
 	createDiv(divID, parentID);
 	
@@ -932,7 +945,6 @@ function changeViewToSingleSearchResult(){
 	
 	addH3(h3Text, centerDivID);
 	addSinglePagePicture(centerDivID);
-	addResultText(colorNameText, centerDivID, className);
 	addSets(centerDivID);
 	
 	setTimeout(resetAnimation, 5000);
@@ -950,10 +962,14 @@ function removeAnimationLegoBox(parentID){
 
 // Lägg till stor bild
 function addSinglePagePicture(parentID){
+	var pictureID = "singlePageImg";
+	
 	var pictureNode = document.createElement("img");
 	var parentElement = document.getElementById(parentID);
 	
 	var picturePath = "images/animation/2569.gif";
+	
+	pictureNode.setAttribute("id", pictureID);
 	
 	pictureNode.setAttribute("src", picturePath);
 	
@@ -983,46 +999,92 @@ function createTable(parentID){
 
 // Lägg till tabellinnehåll
 function createTableContent(parentID){
-	var setNames = ["Alla set som finns", "Death Star II - UCS", "Hot Rod", "City Airport -- Full Size Image Box", "Death Star", "Shuttle Adventure", "Speed Patroller", "Steven Spielberg Moviemaker Set", "Mobile Satellite Up-Link", "2-Pilot Craft"];
+	var IDContent = "ID|2569";
+	var colorContent = "Color|Yellow";
+	var setNames = "Sets|• Death Star II - UCS|• Hot Rod|• City Airport -- Full Size Image Box|• Death Star|• Shuttle Adventure|• Speed Patroller|• Steven Spielberg Moviemaker Set|• Mobile Satellite Up-Link|• 2-Pilot Craft|";
+	
+	var setsSent = false;
+	
+	var singlePageTextContent = [IDContent, colorContent, setNames];
 	
 	var className = "animationSinglePageText";
 	
-	for(var i = 0; i < setNames.length; i++){
-		if(i == 0)
-			createTableHeader(setNames[i], parentID, className);
-		else
-			createTableRow(setNames[i], parentID, className);
+	for(var i = 0; i < singlePageTextContent.length; i++){
+			createTableRow(singlePageTextContent[i], parentID, className, setsSent);
+			if(i == singlePageTextContent.length - 2){
+				setsSent = true;
+			}
 	}
 }
 
-// Skapa tabellrubrik
-function createTableHeader(textToWrite, parentID, className){
-	var tableHeaderID = "animationTableHeader";
-	
-	var tableRow = document.createElement("tr");
-	var tableRowContent = document.createElement("th");
-	var textNode = document.createTextNode(textToWrite);
-	var parentElement = document.getElementById(parentID);
-	
-	tableRowContent.setAttribute("class", className);
-	
-	tableRowContent.appendChild(textNode);
-	tableRow.appendChild(tableRowContent);
-	parentElement.appendChild(tableRow);
-}
-
 // Lägg till de individuella cellernas innehåll
-function createTableRow(textToWrite, parentID, className){
+function createTableRow(textToWrite, parentID, className, setsSent){
+	var header = getTdHeader(textToWrite);
+	textToWrite = getTextToWrite(textToWrite);
+
 	var tableRow = document.createElement("tr");
 	var tableRowContent = document.createElement("td");
 	var textNode = document.createTextNode(textToWrite);
 	var parentElement = document.getElementById(parentID);
 	
-	tableRowContent.setAttribute("class", className);
+	addH4(header, tableRowContent);
 	
-	tableRowContent.appendChild(textNode);
+	tableRowContent.setAttribute("class", className);
+	if(!setsSent){
+		tableRowContent.appendChild(textNode);
+	}
+	else{
+		var setArray = getSetArray(textToWrite);
+		elementObject = convertArrayToTextNode(setArray);
+		tableRowContent.appendChild(elementObject);
+	}
 	tableRow.appendChild(tableRowContent);
 	parentElement.appendChild(tableRow);
+}
+
+// Separera sträng efter rubrik och vanlig text
+// Hämta rubrik
+function getTdHeader(inText){
+	var counter = 0;
+	while(inText[counter] != "|"){
+		++counter;
+	}
+	
+	var header = inText.substr(0, counter);
+	
+	return header;
+}
+
+// Hämta brödtext
+function getTextToWrite(inText){
+	var counter = 0;
+	while(inText[counter] != "|"){
+		++counter;
+	}
+
+	var textToWrite = inText.substr(counter + 1, inText.length);
+	
+	return textToWrite;
+}
+
+// Skapa array av brödtext
+function getSetArray(inText){
+	
+	var setArray = inText.split("|");
+	
+	return setArray;
+}
+
+// Skriv ut medradbrytningar
+function convertArrayToTextNode(setArray){
+	var elementObject = document.createElement("div");
+	
+	for(var i = 0; i < setArray.length; i++){
+		elementObject.appendChild(document.createTextNode(setArray[i]));
+		elementObject.appendChild( document.createElement("br"));
+	}
+	
+	return elementObject;
 }
 
 

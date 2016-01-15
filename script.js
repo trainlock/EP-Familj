@@ -161,3 +161,13 @@ function checkSearchFieldValue(largeFieldID, smallFieldID){
 		}
 	}
 }
+
+// Kolla hash på helpsida
+// För att scrolla ned till animation även om sidan laddas om med hashen i URL
+function checkURL(){
+	var URLHash = window.location.hash;
+	
+	if(URLHash != ""){
+		window.location = "help.html";
+	}
+}

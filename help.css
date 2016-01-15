@@ -7,7 +7,7 @@
 }
 
 #animationBody{
-	background: url("images/lego-background-seamless.jpg");
+	background: url("images/animation/commons-copy_small.png");
 	height: 100%;
 	width: 0;
 	margin: auto;
@@ -21,23 +21,29 @@
 }
 
 #animationCenterDiv{
-	background-color: #FFFFFF;
+	background-color: rgba(255,255,255,0.8);
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	/*font-size: 10px;*/
 }
 
 
 #animationLogo{
-	height: 15%;
+	height: 17%;
 	width: 100%;
-	background-color: #cccccc;
+	background-color: #FFFFFF;
 	text-align: center;
 	color: #ffffff;
 	padding-top: 3%;
 	border-bottom: solid #181818 3px;
 	overflow: hidden;
+}
+
+#animationLogotype{
+	background: url("images/animation/tiny-logo.jpg");
+	width: 243px;
+	height: 66px;
+	margin: -8px auto 0 auto;
 }
 
 #animationH2{
@@ -49,11 +55,19 @@
 
 #animationH3{
 	font-size: 15px;
+	text-align: center;
+}
+
+#animationH4{
+	margin-top: 0; 
+	margin-bottom: 1px;
+	text-align: left;
+	font-size: 12px;
 }
 
 #animationMenuContainer{
 	position: absolute;
-	top: 13.5%;
+	top: 16%;
 }
 
 #animationMenuList{
@@ -65,8 +79,8 @@
 }
 
 .animationMenu{
-	background-color: #FFFFFF;
-	color: #D8D8D8;
+	background-color: #d9d9d9;
+	color: #262626;
 	padding: 4px 4px;
     display: block;
 	margin-left:2px;
@@ -78,13 +92,15 @@
 
 #animationLi1{
 	background-color: #181818;
+	color: #d9d9d9;
 }
 
 #animationTextContainer{
-	width: 43%;
-	background-color: blue;
-	margin: 15% auto 0 auto;
-	font-size: 8px;
+	width: 33%;
+	margin: 6% auto 8px auto;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 700;
 }
 
 #animationSearchContainer{
@@ -95,24 +111,25 @@
 }
 
 #animationInputField{
-	width: 98%;
-	height: 10px;
-	font-size: 8px;
+	width: 100%;
+	height: 12px;
+	font-size: 9px;
 	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	box-shadow:0px 1px 1px 1px #e5e5e5;
 	font-family: Cambria, Cochin, Georgia, serif;
 	text-indent: 16px;
-	background: url("images/animation/magnify_small.gif") no-repeat scroll 2px 2px;
+	background: url("images/animation/magnify_small.png") no-repeat scroll 3px 4px;
 	padding-top: 2px;
 }
 
 #animationSearchButton{
 	color: #000000;
 	border: 1px solid #B1BFC4;
-	font-size: 6px;
+	font-size: 8px;
 	float: left;
 	margin-left: 36%;
 	margin-top: 3px;
+	height: 12px;
 }
 
 #animationHelpIcon{
@@ -124,7 +141,7 @@
 	float: left;
 	cursor: default;
 	background: radial-gradient(circle at 4px 4px, #C2D4A1, #000000);
-	padding: 1px 1px 0 0;
+	padding: 1px 0 0 1px;
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 500;
 	font-size: 8px;
@@ -137,6 +154,7 @@
 	background: url("images/animation/cursor.png") no-repeat scroll 0;
 	top: 268px;
 	left: 350px;
+	z-index: 3;
 }
 
 #animationTopSearchBar{
@@ -144,6 +162,7 @@
 	margin-bottom: 4px;
 	right: 4px;
 	min-width: 100px;
+	top: 15%;
 }
 
 #animationTopSearchField{
@@ -177,10 +196,24 @@
 	box-shadow: 3px 5px 0 #888888;
 	font-size: 8px;
 	font-weight: 100;
+	background-color: #FFFFFF;
 }
 
 .animationSinglePageText{
 	font-size: 10px;
+	text-align: center;
+	padding: 0;
+}
+
+#animationSinglePageTable{
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border-collapse: separate;
+	border: 1px solid black;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
 }
 
 table{
@@ -191,6 +224,10 @@ td, th{
 	border: 1px solid #888888;
 }
 
+#singlePageImg{
+	display: block;
+	margin: 0 auto;
+}
 
 
 
