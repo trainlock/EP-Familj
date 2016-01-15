@@ -1280,40 +1280,41 @@ function clearIntervals(){
 }
 
 
-
-
 // Kontrollera så att fönstret inte är för litet för animeringen
 // Upprepas varje 0.5 sekunder
 function determineIfAnimationPlayable(){
 	var windowSizeWarningID = "windowTooSmallWarning";
 	var buttonID = "startAnimationButton";
 	
-	var windowWidth = getWindowWidth();
-	var windowSizeWarningVisible = elementVisible(windowSizeWarningID);
-	var animationButtonDisabled = checkIfElementDisabled(buttonID);
-	
-	
-	if(windowWidth < demoWidth + 50){
-		
-		if(animationPlaying)
-			abortAnimation();
-		
-		if(!windowSizeWarningVisible)
-			showWindowSizeWarning(windowSizeWarningID);
-		
-		if(!animationButtonDisabled)
-			disableElement(buttonID);
+	if(isMobile.any()){
+		showWindowSizeWarning(windowSizeWarningID);
 	}
 	else{
-		if(windowSizeWarningVisible)
-			hideWindowSizeWarning(windowSizeWarningID);
-		if(animationButtonDisabled && !animationPlaying)
-			enableElement(buttonID);
+		
+		var windowWidth = getWindowWidth();
+		var windowSizeWarningVisible = elementVisible(windowSizeWarningID);
+		var animationButtonDisabled = checkIfElementDisabled(buttonID);
+		
+		if(windowWidth < demoWidth + 50){
+			
+			if(animationPlaying)
+				abortAnimation();
+			
+			if(!windowSizeWarningVisible)
+				showWindowSizeWarning(windowSizeWarningID);
+			
+			if(!animationButtonDisabled)
+				disableElement(buttonID);
+		}
+		else{
+			if(windowSizeWarningVisible)
+				hideWindowSizeWarning(windowSizeWarningID);
+			if(animationButtonDisabled && !animationPlaying)
+				enableElement(buttonID);
+		}
+		
+		var repeatCheckIn = setTimeout(determineIfAnimationPlayable, 500);
 	}
-	
-	
-	
-	var repeatCheckIn = setTimeout(determineIfAnimationPlayable, 500);
 }
 
 
