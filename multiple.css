@@ -1,5 +1,5 @@
-/* -----------------------------------------------
-Alla*/
+
+/* ------------------------------------------- Samtliga filer --------------------------------------------- */
 
 body{
 	background: url("images/commons-copy.jpg");
@@ -8,18 +8,13 @@ body{
 	padding: 0;
 	height: 100%;
 	font-family: Myriad Pro;
+	font-size:16px;
 	color:#262626;
 }
 
-h1{
-	margin: 0;
-	color: #FFFFFF;
-	font-size:60px;
-	text-shadow: 0 3px 0 #181818;
-}
-
+/* Desgin av knappar på Help-sida och sökresultatssida */
 .pageButton{
-	background-color: #d11717;
+	background-color: rgba(209, 23, 23, 0.8);
 	color: white;
 	height: 38px;
 	width: 125px;
@@ -31,32 +26,40 @@ h1{
 	cursor: pointer;
 }
 
+/* Design av knappar på Help-sida och sökresultatssida då musen hålls över knappen */
 .pageButton:hover{
 	background-color: #ff3434;
 }
 
+.pageButton:disabled{
+	background-color: #959EA1;
+	cursor: default;
+}
+
+/* Div för hela sidan */
 .centerWrapper{
 	position: relative;
 	width: 70vw;
 	margin: 0 auto;
 }
 
+/* Div som innehåller mitten på hemsidan, d.v.s. själva innehållet */
 .centerDiv{
 	background-color: rgba(255,255,255,0.8);
 	border-left: 5px solid #262626;
 	border-right: 5px solid #262626;
 	
-	/*Täck hela sidan*/
+	/* Täck hela sidan */
 	position: fixed;
 	width: 70vw;
 	height: 100%;
+	min-height: 250px;
 	
 	/*Scroll*/
 	overflow: auto;
-	
-	min-height: 250px;
 }
 
+/* Högst upp på sidan, innehåller rubrik och meny */
 .logo{
 	height: 15vh;
 	min-height: 120px;
@@ -70,12 +73,13 @@ h1{
 	position: relative;
 }
 
+/* Div för att kunna centrera logotypen */
 #imgLogo{
 	margin: 0 auto;
 	height: 75%;
-	
 }
 
+/* Logotypen, anpassningsbar efter skärmstorlek */
 #imgLogotyp{
 	height: 18vw;
 	width: 55vw;
@@ -86,12 +90,14 @@ h1{
 	
 }
 
+/* Div som innehåller menyn, bestämmer placering och storlek */
 .menuContainer{
 	position: absolute;
 	bottom: 0;
 	min-width: 208px;
 }
 
+/*Meny i form av lista*/
 ul {
 	display: block;
     list-style-type: none;
@@ -117,24 +123,28 @@ li a {
   	text-decoration: none;
 }
 
+/* Ändrar färg på den flik i menyn som musen hålls över */
 li a:hover{
 	background-color:#ffff8c;
 }
 
+/* Ändrar färger på den flik som är aktiv */
 .active{
 	background-color: #262626;
 	color: #d9d9d9;
 }
 
-/* -----------------------------------------------------------
-Huvudsida*/
 
+/* ------------------------------------------- Startsida, sökmotorn --------------------------------------------- */
+
+/* Div med välkomsttext */
 .textContainer{
 	width: 30vw;
 	margin: 15vh auto 1vh auto;
 	text-align: center;
 }
 
+/* Centrerar sökruta, sökknapp och hjälpikon */
 .searchContainer{
 	position: relative;
 	width: 39%;
@@ -143,6 +153,7 @@ Huvudsida*/
 	margin: 0 auto;
 }
 
+/* Sökfält */
 .searchBox{
 	position: relative;
 	width: 25vw;
@@ -151,39 +162,56 @@ Huvudsida*/
 	min-height: 30px;
 	margin: 0 auto;
 	font-size: 20px;
-	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-family: Myriad Pro;
 	z-index: 1;
 	box-shadow:0px 1px 1px 1px #e5e5e5;
-	font-family: Cambria, Cochin, Georgia, serif;
 	text-indent: 32px;
 	padding: 1px;
 	background: url("images/magnify.gif") no-repeat scroll 3px 50%;
 }
 
+/* Sökknapp */
 .searchButton{
-	font-size: 16px;
+	background-color: #677980;
+	height: 27px;
+	border-radius: 10px;
+	border: solid 2px #FFFFFF;
+	color:#FFFFFF;
+	font-family: Myriad Pro;
+	font-size: 18px;
 	float: left;
 	margin-left: 40%;
 	margin-top: 6px;
 	z-index: 1;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
+.searchButton:hover{
+	background-color: #88999E;
+	cursor: pointer;
+}
+
+/* Hjälpikon vilken man håller över för att få snabbhjälp */
 .helpIcon{
 	height: 21px;
 	width: 21px;
-	background-color: #C2D4A1;
-	border-radius: 50%;
-	border: 1px solid #000000;
+	background-color: #d11717;
+	color:#FFFFFF;
+	border-radius: 10px;
+	border: 2px solid #FFFFFF;
 	margin: 6px 0 0 12px;
 	float: left;
 	cursor: help;
-	z-index: 1;
-	background: radial-gradient(circle at 4px 4px, #C2D4A1, #000000);
-	padding: 1px 1px 0 0;
+	z-index: 1; /*sätter elementet framför resp. bakom med js*/
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+	padding: 2px 0 0 0;
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 900;
 }
 
+/* Div i vilken hjälprutan visas */
 #helpContainer{
 	width: 180px;
 	height: 192px;
@@ -191,7 +219,7 @@ Huvudsida*/
 	margin: 52px 0 0 40%;
 }
 
-/*För att inte visa båda textfälten samtidigt*/
+/* För att inte visa båda textfälten samtidigt */
 #largePlaceHolder{
 	display: inline-block;
 }
@@ -201,8 +229,7 @@ Huvudsida*/
 }
 
 
-/*Om vi vill göra en jävla pratbubbla*/
-
+/* Hjälpbubbla vid sökfältet */
 .speechBubble{
 	position: relative;
 	width: 160px;
@@ -211,14 +238,13 @@ Huvudsida*/
 	top: 30px;
 	margin-left: 52px;
 	border-radius: 24px;
-	border: 2px solid #000000;
+	border: 2px solid #262626;
 }
 
 .speechBubble:before{
 	content: ' ';
 	position: absolute;
 	left: 38px;
-	/*bottom: 132px;*/
 	border: 28px solid;
 	border-color: transparent transparent #000000 #000000;
 }
@@ -226,22 +252,23 @@ Huvudsida*/
 	content: ' ';
 	position: absolute;
 	left: 40px;
-	/*bottom: 127px;*/
 	border: 28px solid;
 	border-color: transparent transparent #FFFFFF #FFFFFF;
 }
 
-/*---------------------------------------------------------------------------------
-Alla utom första*/
+
+/* ------------------------------ Design för alla sidor förutom Start ------------------------------ */
 
 h2{
 	font-size: 32px;
+	font-weight: 500;
 }
 
 .infoText{
 	font-size: 24px;
 }
 
+/* Sökfält i menyraden */
 .topSearchBar{
 	position: absolute;
 	bottom: 4px;
@@ -266,13 +293,7 @@ h2{
 	height: 18px;
 }
 
-/*----------------------------------------------------------------------------------
-errorsida*/
-
-.dottedList{
-	list-style-type: circle;
-}
-
+/* Innehåller textdesign för Error-, Help- och Aboutsidorna */
 .errorContainer{
 	width: 44%;
 	min-height: 320px;
@@ -280,6 +301,15 @@ errorsida*/
 	margin: 15vh auto 1vh auto;
 }
 
+
+/* --------------------------------------------- Errorsida --------------------------------------------- */
+
+/* Stylear lista */
+.dottedList{
+	list-style-type: circle;
+}
+
+/* Innehåller och stylear rubrik */
 .headerContainer{
 	background-color: #ffff8c;
 	padding: 1px;
@@ -288,9 +318,10 @@ errorsida*/
 }
 
 
-/* -------------------------------------------------------------------------
-Sökresultat*/
 
+/* --------------------------------------------- Sökresultat --------------------------------------------- */
+
+/* div för varje legobit i sökresultatet */
 .legoBoxContainer{
 	float: left;
 	height: 27%;
@@ -299,6 +330,7 @@ Sökresultat*/
 	min-width: 268px;
 }
 
+/* Div för rutan med ett av resultaten */
 .legoBox{
 	height: 11vw;
 	width: 11vw;
@@ -315,26 +347,25 @@ Sökresultat*/
 	background-color: #FFFFFF;
 }
 
+/* Förstorar resultatrutan */
 .legoBox:hover{
 	transform: scale(1.5);
-	/*height: 15vw;
-	width: 15vw;
-	margin: 5.95vh auto;
-	font-size: 24px;
-	box-shadow: 4.5px 7.5px 0 #888888;*/
 }
 
 .searchResultContainer{
 	height: 100%;
 }
 
+/* Div med previous och next knappar */
 .buttonDiv{
 	margin: 8vw auto 6vh 60%;
 }
 
 
 
-/* ---------------------------------------- Ett resultat ------------------------------------------ */
+/* --------------------------------------------- Ett resultat --------------------------------------------- */
+
+/* Div över ett resultat*/
 .singleContent{
 	width: 50%;
 	position: relative;
@@ -342,15 +373,15 @@ Sökresultat*/
 	text-align: center;
 	margin-top:2vw;
 }
- 
+
+/* Tabell med info om valds resultatet*/
 #setTable{
 	margin-top: 5vw;
 	width: 100%;
 	border-collapse: separate;
-	border: 1px solid black;
-	border-radius: 6px;
+	border: 2px solid #FFFFFF;
+	border-radius: 5px;
 	-moz-border-radius: 6px;
-
 }
 
 h3{
@@ -360,16 +391,16 @@ h3{
 	font-size:18px;
 }
 
-
 td{
 	width: 100%;
 	padding: 0.8vw;
-	border-top: 1px solid black;
+	border: 2px solid #FFFFFF;
 }
 
 
-/* ---------------------------------------- Help / about ------------------------------------------ */
+/* ------------------------------------------------- Help / about ------------------------------------------------- */
 
+/* Varningsfönster om användaren har förlitet fönster */
 #windowTooSmallWarning{
 	padding: 4px;
 	width: 25vw;
@@ -385,14 +416,18 @@ td{
 #animationButtonContainer{
 	padding-top: 12px;
 	height: 200px;
-	width: 83px;
+	width: 124px;
 	margin: 0 auto;
 }
 
-/* ---------------------------------------- @media ------------------------------------------ */
 
-/* ---------------------------------------- Huvudsida ------------------------------------------ */
+/* -------------------------------------------------- @media ---------------------------------------------------- */
+/* ------------------------------------- Anpassar sidan för mobila enheter ------------------------------------- */
 
+/* ------------------------------------------------- Huvudsida ------------------------------------------------- */
+
+
+/* Ändrar position för sökfält och pratbubblan för mobilenhet*/
 @media screen and (min-width: 400px) and (min-height: 545px){
 	.speechBubble:before{
 	top: -57px;
@@ -402,9 +437,7 @@ td{
 	}
 }
 
-
 @media screen and (max-width: 400px){
-	
 	.searchContainer{
 		width: 60%;
 		min-width: 160px;	
@@ -425,14 +458,16 @@ td{
 	.speechBubble:before{
 		left: 35px;
 		top: -57px;
-		/*bottom: 132px;*/
 		border-color: transparent #000000 #000000 transparent;
 	}
 	.speechBubble:after{
 		left: 33px;
 		top: -52px;
-		/*bottom: 127px;*/
 		border-color: transparent #FFFFFF #FFFFFF transparent;
+	}
+	
+	.legoBox:hover{
+		transform: scale(1.1);
 	}
 	
 	#helpContainer{
@@ -449,27 +484,11 @@ td{
 	}
 }
 
-/* Bättre att flytta pratbubblan vid max-height: 335px? 545*/
 @media screen and (max-height: 545px){
 	.logo{
 		min-height: 80px;
 		padding-top: 0.5vw;
 	}
-	/*//1//*/
-	/*.menuContainer{
-		position: fixed;
-	}
-	li a{
-		border-top: 1px solid #000000;
-		border-left: 1px solid #000000;
-		border-right: 1px solid #000000;
-	}*/
-	
-	/*//2//*/
-	/*li a{
-		height: 12px;
-		font-size: 14px;
-	}*/
 	
 	.menuContainer{
 		z-index: -1;
@@ -571,33 +590,10 @@ td{
 	}
 }
 
-/* ----------------------------------------- Alla utom första -----------------------------------------*/
+/* --------------------------------------------- Alla utom första --------------------------------------------- */
 
+/* Ändrar position för sökfält i menyraden för mobilenhet*/
 @media screen and (max-width: 425px){
-	/*Alt.1 Flytta ner menyn så den inte krockar med sökfältet*/
-	/*.logo{
-		min-height: 122px;
-	}
-	
-	.menuContainer{
-	z-index: -1;
-	top: 135px;
-	}
-	
-	li a {
-    border-top-left-radius: 0;
-  	border-top-right-radius: 0;
-	border-bottom-left-radius: 6px;
-  	border-bottom-right-radius: 6px;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid #000000;
-	border-left: 1px solid #000000;
-	padding: 9.5px 8px;
-	}*/
-	
-	
-	/*Alt.2 flytta ner sökfält*/
-	
 	.topSearchBar{
 		position: fixed;
 		bottom: 0px;
@@ -619,13 +615,11 @@ td{
 		bottom: 8px;
 		right: 25px;
 	}
-	
-	
 }
 
+/* ------------------------------------ Sökresultat, Help, Error och About ------------------------------------ */
 
-/* ------------------------------------- Sökresultat -------------------------------------------*/
-
+/* Ändrar storlek och position för resultaten för mobilenhet*/
 @media screen and (max-width: 1320px){
 	.centerWrapper{
 		width: 900px;
@@ -680,12 +674,6 @@ td{
 	}
 }
 
-@media screen and (max-width: 400px){
-	.legoBox:hover{
-		transform: scale(1.1);
-	}
-}
-
 @media screen and (max-width: 290px){
 	.topSearchBar{
 		bottom: 16px;
@@ -703,6 +691,6 @@ td{
 @media screen and (max-width: 700px){
 	.buttonDiv{
 		width: 254px;
-		margin: 8vw auto;
+		margin: 8vw auto 12vh auto;
 	}
 }
