@@ -34,7 +34,6 @@ h1{
 .pageButton:hover{
 	background-color: #ff3434;
 }
-}
 
 .centerWrapper{
 	position: relative;
@@ -161,30 +160,28 @@ Huvudsida*/
 	background: url("images/magnify.gif") no-repeat scroll 3px 50%;
 }
 
-#searchButton{
+.searchButton{
+	font-size: 16px;
 	float: left;
-	margin-left: 30%;
+	margin-left: 40%;
 	margin-top: 6px;
 	z-index: 1;
-	width: 116px;
-	height: 34px;
 }
 
 .helpIcon{
-	height: 26px;
-	width: 26px;
+	height: 21px;
+	width: 21px;
 	background-color: #C2D4A1;
 	border-radius: 50%;
 	border: 1px solid #000000;
-	margin: 9px 0 0 12px;
+	margin: 6px 0 0 12px;
 	float: left;
 	cursor: help;
 	z-index: 1;
 	background: radial-gradient(circle at 4px 4px, #C2D4A1, #000000);
-	padding: 2px 2px 0 0;
+	padding: 1px 1px 0 0;
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 900;
-	font-size: 21px;
 }
 
 #helpContainer{
@@ -192,8 +189,6 @@ Huvudsida*/
 	height: 192px;
 	opacity: 0;
 	margin: 52px 0 0 40%;
-	padding-top: 10px;
-	padding-left: 19px;
 }
 
 /*För att inte visa båda textfälten samtidigt*/
@@ -389,7 +384,7 @@ td{
 
 #animationButtonContainer{
 	padding-top: 12px;
-	height: 21px;
+	height: 200px;
 	width: 83px;
 	margin: 0 auto;
 }
@@ -419,18 +414,8 @@ td{
 		min-width: 100%;
 	}
 	
-	#searchButton{
-		margin-left: 21%;
-		width: 84px;
-		height: 29px;
-		font-size: 12px;
-	}
-	
-	.helpIcon{
-		height: 21px;
-		width: 21px;
-		padding: 1px 1px 0 0;
-		font-size: 17px;
+	.searchButton{
+		margin-left: 25%;
 	}
 	
 	.speechBubble{
@@ -453,8 +438,6 @@ td{
 	#helpContainer{
 		margin-left: 0;
 		width: 100%;
-		padding-top: 6px;
-		padding-left: 5px;
 	}
 	
 	#largePlaceHolder{
@@ -504,6 +487,10 @@ td{
 		padding: 9.5px 8px;
 	}
 	
+	.speechBubble{
+		top: 38px;
+	}
+	
 	.speechBubble:before{
 		bottom: -56px;
 		border-color: #000000 transparent transparent #000000;
@@ -515,7 +502,6 @@ td{
 	
 	#helpContainer{
 		margin-top: -218px;
-		padding-top: 35px;
 	}
 	
 	#imgLogotyp{
@@ -564,13 +550,13 @@ td{
 	.speechBubble:before{
 		top: 102px;
 		bottom: -30px;
-		left: 90px;		
+		left: 85px;		
 		border-color: #000000 transparent transparent #000000;
 	}
 	.speechBubble:after{
 		top: 98px;
 		bottom: 0;
-		left: 92px;
+		left: 87px;
 		border-color: #FFFFFF transparent transparent #FFFFFF;
 	}
 	
@@ -676,7 +662,7 @@ td{
 		min-width: 185px;
 	}
 	h2{
-		font-size: 24px;
+		font-size: 20px;
 	}
 	.infoText{
 		font-size: 16px;
