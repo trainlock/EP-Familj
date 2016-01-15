@@ -1,6 +1,7 @@
+
 /* All kod i den här filen behandlar endast animationen */
 
-#animationContainer	{
+#animationContainer{
 	width: 0px;
 	height: 0px;
 	background-color: #000000; 	
@@ -29,7 +30,6 @@
 	overflow: hidden;
 }
 
-
 #animationLogo{
 	height: 17%;
 	width: 100%;
@@ -46,13 +46,6 @@
 	width: 243px;
 	height: 66px;
 	margin: -8px auto 0 auto;
-}
-
-#animationH2{
-	margin: 0;
-	color: #FFFFFF;
-	font-size:30px;
-	text-shadow: 0 2px 0 #181818;
 }
 
 #animationH3{
@@ -78,18 +71,6 @@
     margin: 0;
     padding: 0;
 	font-size: 8px;
-}
-
-.animationMenu{
-	background-color: #d9d9d9;
-	color: #262626;
-	padding: 4px 4px;
-    display: block;
-	margin-left:2px;
-    border-top-left-radius: 6px;
-  	border-top-right-radius: 6px;
-  	text-align: center;
-  	text-decoration: none;
 }
 
 #animationLi1{
@@ -201,12 +182,6 @@
 	background-color: #FFFFFF;
 }
 
-.animationSinglePageText{
-	font-size: 10px;
-	text-align: center;
-	padding: 0;
-}
-
 #animationSinglePageTable{
 	margin-top: 5%;
 	margin-left: auto;
@@ -218,6 +193,29 @@
 	-moz-border-radius: 6px;
 }
 
+#singlePageImg{
+	display: block;
+	margin: 0 auto;
+}
+
+.animationMenu{
+	background-color: #d9d9d9;
+	color: #262626;
+	padding: 4px 4px;
+    display: block;
+	margin-left:2px;
+    border-top-left-radius: 6px;
+  	border-top-right-radius: 6px;
+  	text-align: center;
+  	text-decoration: none;
+}
+
+.animationSinglePageText{
+	font-size: 10px;
+	text-align: center;
+	padding: 0;
+}
+
 table{
 	border: 1px solid #888888;
 }
@@ -225,11 +223,3 @@ table{
 td, th{
 	border: 1px solid #888888;
 }
-
-#singlePageImg{
-	display: block;
-	margin: 0 auto;
-}
-
-
-

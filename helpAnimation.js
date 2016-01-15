@@ -248,20 +248,6 @@ function expandAnimationBody(){
 	divElement.style.width = containerWidth + "px";
 }
 
-// Lägg till h2
-function addH2(header, parentID){
-	var h2Header = document.createElement("h2");
-	var parentDiv = document.getElementById(parentID);
-	
-	var textContent = document.createTextNode(header);
-	
-	h2Header.appendChild(textContent);
-	
-	h2Header.setAttribute("id", "animationH2");
-	
-	parentDiv.appendChild(h2Header);
-}
-
 // Lägg till h3
 function addH3(header, parentID){
 	var h3Header = document.createElement("h3");
