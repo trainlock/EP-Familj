@@ -7,6 +7,7 @@ OK - Keywords
 OK - Flytta ned sidknappar
 OK - Fixa sökfält/menykrock
 
+OK - Se till att loggan länkar tillbaka till startsidan
 Gå igenom filer och ta bort bortkommenterad kod
 
 
