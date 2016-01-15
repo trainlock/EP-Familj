@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--Anpassa storlek efter enhet (ex mobil)-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewport">
 		<title>Lego piece</title>
 		<link href="multiple.css" rel="stylesheet" type="text/css">
 		<meta charset="utf-8">
-		<script src="multiple.js"></script>
 	</head>
 	<body>
 		<!--Relativ div för att centrera en absolut-->
