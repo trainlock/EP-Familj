@@ -31,12 +31,13 @@ body{
 	background-color: #ff3434;
 }
 
+/* Ändra färg på knapp som inte går att klicka på */
 .pageButton:disabled{
 	background-color: #959EA1;
 	cursor: default;
 }
 
-/* Div för hela sidan */
+/* Div för att centrera innehåll på sidan */
 .centerWrapper{
 	position: relative;
 	width: 70vw;
@@ -241,6 +242,7 @@ li a:hover{
 	border: 2px solid #262626;
 }
 
+/* "Trekant" till pratbubbla, svart */
 .speechBubble:before{
 	content: ' ';
 	position: absolute;
@@ -248,12 +250,26 @@ li a:hover{
 	border: 28px solid;
 	border-color: transparent transparent #000000 #000000;
 }
+
+/* "Trekant" till pratbubbla, vit */
 .speechBubble:after{
 	content: ' ';
 	position: absolute;
 	left: 40px;
 	border: 28px solid;
 	border-color: transparent transparent #FFFFFF #FFFFFF;
+}
+
+#emptySearchWarning{
+	padding: 8px;
+    width: 17vw;
+    height: 40px;
+    border: 1px solid #000000;
+    background-color: #ffff8c;
+    font-size: 16px;
+    opacity: 0;
+    border-radius: 4px;
+    margin: -190px auto 0 auto;
 }
 
 
@@ -342,9 +358,6 @@ h2{
 	border-radius: 12px;
 	box-shadow: 3px 5px 0 #888888;
 	cursor: pointer;
-	
-	/*Inte nödvändigt*/
-	background-color: #FFFFFF;
 }
 
 /* Förstorar resultatrutan */

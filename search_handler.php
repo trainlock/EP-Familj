@@ -39,7 +39,7 @@
 		}
 		
 		// Kontrollerar att det finns en query
-		// Går annars till Felsidan. 
+		// Går annars till felsidan. 
 		if($search == "")
 		{
 			$searchEntry = mysql_real_escape_string($_POST['searchWord']);
@@ -136,6 +136,7 @@
 		// Kolla om det finns resultat på nästa sida
 		$offsetNextPage = $offset + $OFFSET_NR;
 		
+		// Ställ fråga för första biten på nästa sida
 		$nextPage = mysql_query("SELECT parts.Partname, parts.PartID, images.colorID, images.has_gif, images.has_jpg, images.itemtypeID
 								FROM parts
 									INNER JOIN images
@@ -144,7 +145,8 @@
 								OR parts.PartID LIKE '%$searchEntry%'
 								LIMIT 1 OFFSET $offsetNextPage;
 								");
-								
+		
+		// Om det inte finns fler resultat, inaktivera nextknapp via js
 		if(mysql_num_rows($nextPage) === 0){
 			$contentOnNextPage = "false";
 		}					

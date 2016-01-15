@@ -3,25 +3,20 @@
 	<head>
 		<!--Anpassa storlek efter enhet (ex mobil)-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewport">
-		<title>Lego piece</title>
+		<title>Lego Piece</title>
 		<link href="multiple.css" rel="stylesheet" type="text/css">
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<!--Relativ div för att centrera en absolut-->
+		<!--Relativ div för att centrera sidan-->
 		<div class="centerWrapper">
-		
-		 <!--Huvuddelen av sidan, absolut så den täcker hela sidans höjd-->
 			<div class="centerDiv">
-			
-				<!--Logga i toppen-->
 				<div class="logo">
 					<div id="imgLogo">	
 						<a href="start.html">
 							<img src="images/logo.jpg" alt="Logotypbild" id="imgLogotyp">
 						</a>
 					</div>
-				
 					<div class="menuContainer">
 						<ul>
 							<li><a class="active" href="start.html">Search</a></li>
@@ -54,7 +49,8 @@
 							mysql_connect("mysql.itn.liu.se","lego");              
 							mysql_select_db("lego");                                                                      
 			
-			
+							//Ställ frågan till databasen
+							//Hämta info om färg och bild om biten
 							$content = mysql_query("SELECT parts.Partname, parts.PartID,
 													images.itemtypeID, images.colorID,
 													images.has_gif, images.has_jpg, 
@@ -69,9 +65,9 @@
 													AND colors.ColorID = '$colorID'
 													LIMIT 1");
 													
-							
-							while ($baby_row = mysql_fetch_array($content)) {
-								$partName= $baby_row['Partname'];
+							//Endast direkt koppling till PartID
+							while($baby_row = mysql_fetch_array($content)) {
+								$partName = $baby_row['Partname'];
 								$partID = $baby_row['PartID'];
 								
 								//Images
@@ -96,7 +92,8 @@
 								else 
 									echo 'No image found.';
 							}
-							// Ställ frågan    
+							
+							// Ställ frågan, hämtar set som biten är med i
 							$result = mysql_query("SELECT sets.Setname
 													FROM parts
 														INNER JOIN inventory
@@ -117,6 +114,7 @@
 									</tr>
 									<tr>
 									<td><h3>Sets</h3>");
+							
 							// Skriv ut alla poster i svaret
 							while ($row = mysql_fetch_array($result)) {	
 								$setName = $row["Setname"];

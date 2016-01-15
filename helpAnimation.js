@@ -1,11 +1,12 @@
-/* Tanken bakom animationen är att skapa en mindre version av hemsidan, 
+/* 
+Tanken bakom animationen är att skapa en mindre version av hemsidan, 
 med andra ord genereras alla element, all text osv. via javascript i den animationsdiv
 som finns i help.html. All rörelse är gjord via att sätta intervaller på ett liknande
 sätt som den klocka vi gjorde under en av laborationerna, nämligen genom att kalla en funktion upprepade
 gånger och för varje gång göra en koll om elementet har nått sin önskade position.
 Det finns även en del funktioner för att hantera för små fönsterstorlekar och för att kunna avbryta 
 uppspelningen på ett korrekt sätt.
- */
+*/
 
 
 
@@ -1315,14 +1316,6 @@ function determineIfAnimationPlayable(){
 		
 		var repeatCheckIn = setTimeout(determineIfAnimationPlayable, 500);
 	}
-}
-
-
-// Hämta webbläsarens bredd
-function getWindowWidth(){
-	var windowWidth = window.innerWidth;
-	
-	return windowWidth;
 }
 
 // Kolla om element är synligt

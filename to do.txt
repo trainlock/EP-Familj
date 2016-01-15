@@ -8,12 +8,12 @@ OK - Flytta ned sidknappar
 OK - Fixa sökfält/menykrock
 
 OK - Se till att loggan länkar tillbaka till startsidan
-Gå igenom filer och ta bort bortkommenterad kod
+OK - Gå igenom filer och ta bort bortkommenterad kod
 
 
 
 
-Se till att allt är ihopkopplat
-Ändra titlar på sidorna (sida 1, test osv.)
-Se till så att animeringen fungerar när allt är klart
-Validera kod
+OK - Se till att allt är ihopkopplat
+OK - Ändra titlar på sidorna (sida 1, test osv.)
+OK - Se till så att animeringen fungerar när allt är klart
+OK - Validera kod

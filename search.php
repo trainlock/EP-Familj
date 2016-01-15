@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>   
 <html>                                                         
-	<head><title>Test lego</title><link href="multiple.css" rel="stylesheet" type="text/css">
+	<head><title>Search Result</title><link href="multiple.css" rel="stylesheet" type="text/css">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="script.js"></script></head>           
@@ -24,7 +24,7 @@
 						<li><a href="about.html">About</a></li>
 					</ul>
 				</div>
-				<!--Ingen aning om det går att skicka till samma fil-->
+				<!-- Ny sökning från sökruta i menyn -->
 				<div class="topSearchBar">
 					<form action="search.php" method="post">
 						<input id="searchIcon" type="image" src="images/magnify.gif"></input>
@@ -37,8 +37,11 @@
 			?>
 			<div class="buttonDiv">
 				<form method="post" action="search.php">
+					<!-- Spara sökordet -->
 					<input type="hidden" name="hiddenEntry" value="<?php echo htmlspecialchars($search); ?>">
+					<!-- Talar om vilken sida med sökresultat som visas -->
 					<input type="hidden" name="offsetValue" value="<?php echo htmlspecialchars($offset); ?>" id="offsetValue">
+					<!-- Boolean för om det finns innehåll på nästa sida, används i ett javascript -->
 					<input type="hidden" name="ContentOnNextPage" value="<?php echo htmlspecialchars($contentOnNextPage); ?>" id="contentOnNextPage">
 					<input type="submit" name="page" class="pageButton" value="previous" id="previousButton">
 					<input type="submit" name="page" class="pageButton" value="next" id="nextButton">

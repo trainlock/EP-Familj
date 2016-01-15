@@ -27,13 +27,9 @@
 					</ul>
 				</div>
 			</div>
-
-			<!--<div class="containerContainer"></div>-->
-				
 				<div class="textContainer">
 					<h2>Welcome! Search for a lego part</h2>
 				</div>
-				
 				<div class="searchContainer" id="formContainer">
 						<form action="search.php" method="post">
 							<!--Mer utförlig placeholder för större fönster-->
@@ -44,7 +40,7 @@
 							<input class="searchBox" placeholder="Search piece" 
 							type="text" id="smallPlaceHolder" name="searchWordShort">
 							<input type="submit" class="searchButton" value="Search"
-							onclick="return checkSearchFieldValue('largePlaceHolder', 'smallPlaceHolder')">
+							onclick="return checkSearchFieldValue('largePlaceHolder', 'smallPlaceHolder', 'emptySearchWarning')">
 							<div class="helpIcon" onmouseover="showHelpBox('helpContainer')" 
 							onmouseout=" hideHelpBox('helpContainer')">?</div>
 						</form>
@@ -53,6 +49,9 @@
 							<p>To find a lego piece, search for it's id-number or a part of the name.</p>
 						</div>
 					</div>
+				</div>
+				<div id="emptySearchWarning">
+					The search field is empty, please enter a search word.
 				</div>
 		</div>
 	</div>
