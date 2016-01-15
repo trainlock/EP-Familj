@@ -17,7 +17,9 @@
 				<!--Logga i toppen-->
 				<div class="logo">
 					<div id="imgLogo">	
-						<img src="images/logo.jpg" alt="Logotypbild" id="imgLogotyp">
+						<a href="start.html">
+							<img src="images/logo.jpg" alt="Logotypbild" id="imgLogotyp">
+						</a>
 					</div>
 				
 					<div class="menuContainer">
