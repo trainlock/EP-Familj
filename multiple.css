@@ -503,6 +503,7 @@ td{
 	.logo{
 		min-height: 80px;
 		padding-top: 0.5vw;
+		margin-bottom: 4px;
 	}
 	
 	.menuContainer{
