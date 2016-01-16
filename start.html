@@ -27,32 +27,32 @@
 					</ul>
 				</div>
 			</div>
-				<div class="textContainer">
-					<h2>Welcome! Search for a lego part</h2>
-				</div>
-				<div class="searchContainer" id="formContainer">
-						<form action="search.php" method="post">
-							<!--Mer utförlig placeholder för större fönster-->
-							<input class="searchBox" placeholder="Search piece name or id" 
-							type="text" id="largePlaceHolder" name="searchWord"
-							onfocus="centerTextFieldOnMobile()">
-							<!--Kortare placeholder för mindre fönster, ändras vi fönsterbredd 400px-->
-							<input class="searchBox" placeholder="Search piece" 
-							type="text" id="smallPlaceHolder" name="searchWordShort">
-							<input type="submit" class="searchButton" value="Search"
-							onclick="return checkSearchFieldValue('largePlaceHolder', 'smallPlaceHolder', 'emptySearchWarning')">
-							<div class="helpIcon" onmouseover="showHelpBox('helpContainer')" 
-							onmouseout=" hideHelpBox('helpContainer')">?</div>
-						</form>
-					<div id="helpContainer">
-						<div class="speechBubble">
-							<p>To find a lego piece, search for it's id-number or a part of the name.</p>
-						</div>
+			<div class="textContainer">
+				<h2 id="welcomeText">Welcome! Search for a lego part</h2>
+			</div>
+			<div class="searchContainer" id="formContainer">
+					<form action="search.php" method="post">
+						<!--Mer utförlig placeholder för större fönster-->
+						<input class="searchBox" placeholder="Search piece name or id" 
+						type="text" id="largePlaceHolder" name="searchWord"
+						onfocus="centerTextFieldOnMobile()">
+						<!--Kortare placeholder för mindre fönster, ändras vi fönsterbredd 400px-->
+						<input class="searchBox" placeholder="Search piece" 
+						type="text" id="smallPlaceHolder" name="searchWordShort">
+						<input type="submit" class="searchButton" value="Search"
+						onclick="return checkSearchFieldValue('largePlaceHolder', 'smallPlaceHolder', 'emptySearchWarning')">
+						<div class="helpIcon" onmouseover="showHelpBox('helpContainer')" 
+						onmouseout=" hideHelpBox('helpContainer')">?</div>
+					</form>
+				<div id="helpContainer">
+					<div class="speechBubble">
+						<p>To find a lego piece, search for it's id-number or a part of the name.</p>
 					</div>
 				</div>
-				<div id="emptySearchWarning">
-					The search field is empty, please enter a search word.
-				</div>
+			</div>
+			<div id="emptySearchWarning">
+				The search field is empty, please enter a search word.
+			</div>
 		</div>
 	</div>
 

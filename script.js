@@ -56,6 +56,13 @@ function getWindowWidth(){
 	return windowWidth;
 }
 
+// Hämta webbläsarens höjd
+function getWindowHeight(){
+	var windowHeight = window.innerHeight;
+	
+	return windowHeight;
+}
+
 // Ladda sidan med fokus på sökfältet
 // Väljer rätt fält
 function focusTextFieldOnLoad(){
@@ -167,17 +174,50 @@ function checkSearchFieldValue(largeFieldID, smallFieldID, emptyWarningID){
 	
 	var largeFieldValue = document.getElementById(largeFieldID).value;
 	var smallFieldValue = document.getElementById(smallFieldID).value;
-	var warningDiv = document.getElementById(emptyWarningID);
 	
 	if(largeFieldValue == ""){
 		if(smallFieldValue == ""){
-			// Visa varning
-			warningDiv.style.opacity = "1";
-			
+			displayEmptySearchWarning(emptyWarningID);
 			return false;
 		}
 	}
 }
+
+function displayEmptySearchWarning(emptyWarningID){
+	var warningDiv = document.getElementById(emptyWarningID);
+	
+	// Visa varning
+	warningDiv.style.opacity = "1";
+	
+	// Om telefon, se till att varningen alltid syns
+	if(isMobile.any()){
+		shiftEmptySearchWarningPosition();
+	}
+}
+
+// Se till att felmeddelandet syns på fönstret på telefon hela tiden, oavsett om
+// man roterar vyn
+function shiftEmptySearchWarningPosition(){
+	var emptyWarningID = "emptySearchWarning";
+	var welcomeTextID = "welcomeText";
+	
+	var warningDiv = document.getElementById(emptyWarningID);
+	var welcomeText = document.getElementById(welcomeTextID);
+	
+	var windowHeight = getWindowHeight();
+	
+	if(windowHeight < 545){
+		warningDiv.style.margin = "-90px auto 0 auto";
+		welcomeText.style.opacity = "0";
+	}
+	else{
+		warningDiv.style.margin = "-190px auto 0 auto";
+		welcomeText.style.opacity = "1";
+	}
+	
+	var repeatCheckIn = setTimeout(shiftEmptySearchWarningPosition, 500);
+}
+
 
 // Kolla hash på helpsida
 // För att scrolla ned till animation även om sidan laddas om med hashen i URL
