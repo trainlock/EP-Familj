@@ -1282,16 +1282,47 @@ function clearIntervals(){
 
 
 // Kontrollera så att fönstret inte är för litet för animeringen
-// Upprepas varje 0.5 sekunder
+// eller att användaren inte är på mobil enhet
 function determineIfAnimationPlayable(){
 	var windowSizeWarningID = "windowTooSmallWarning";
 	var buttonID = "startAnimationButton";
 	
 	if(isMobile.any()){
-		showWindowSizeWarning(windowSizeWarningID);
+		determineIfPlayableOnMobile(windowSizeWarningID, buttonID);
 	}
 	else{
-		
+		determineIfPlayableOnComputer();
+	}
+}
+
+// Mobil enhet, inaktiverar animation och skriver ut varning
+function determineIfPlayableOnMobile(windowSizeWarningID, buttonID){
+	changeWindowSizeWarningText(windowSizeWarningID);
+	showWindowSizeWarning(windowSizeWarningID);
+	disableElement(buttonID);
+}
+
+// Ändrar varningsmeddelandet för att vara mer informativt för mobilanvändare
+function changeWindowSizeWarningText(windowSizeWarningID){
+	var textToWrite = "Please Note: Animation is not playable on mobile devices."
+	var elementObject = document.getElementById(windowSizeWarningID);
+	
+	var textContent = elementObject.childNodes[0];
+	
+	elementObject.removeChild(textContent);
+	
+	textContent = document.createTextNode(textToWrite);
+	
+	elementObject.appendChild(textContent);
+	
+}
+
+// Dator, kontrollera så att fönstret inte är för litet för animeringen
+// Upprepas varje 0.5 sekunder
+function determineIfPlayableOnComputer(){
+		var windowSizeWarningID = "windowTooSmallWarning";
+		var buttonID = "startAnimationButton";
+	
 		var windowWidth = getWindowWidth();
 		var windowSizeWarningVisible = elementVisible(windowSizeWarningID);
 		var animationButtonDisabled = checkIfElementDisabled(buttonID);
@@ -1314,14 +1345,12 @@ function determineIfAnimationPlayable(){
 				enableElement(buttonID);
 		}
 		
-		var repeatCheckIn = setTimeout(determineIfAnimationPlayable, 500);
-	}
+		var repeatCheckIn = setTimeout(determineIfPlayableOnComputer, 500);
 }
 
 // Kolla om element är synligt
 function elementVisible(elementID){
 	var elementObject = document.getElementById(elementID);
-	
 	var opacity = window.getComputedStyle(elementObject).opacity;
 	
 	if(opacity != 0)
@@ -1333,7 +1362,6 @@ function elementVisible(elementID){
 // Sätt opacitet till 1
 function showWindowSizeWarning(elementID){
 	var elementObject = document.getElementById(elementID);
-	
 	elementObject.style.opacity = "1";
 }
 
