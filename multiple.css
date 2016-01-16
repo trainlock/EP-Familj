@@ -127,6 +127,7 @@ li a {
 /* Ändrar färg på den flik i menyn som musen hålls över */
 li a:hover{
 	background-color:#ffff8c;
+	color: #262626;
 }
 
 /* Ändrar färger på den flik som är aktiv */
@@ -358,6 +359,7 @@ h2{
 	border-radius: 12px;
 	box-shadow: 3px 5px 0 #888888;
 	cursor: pointer;
+	background-color: #FFFFFF;
 }
 
 /* Förstorar resultatrutan */
@@ -504,8 +506,7 @@ td{
 	}
 	
 	.menuContainer{
-		z-index: -1;
-		top: 85px;
+		top: 87px;
 	}
 	
 	li a {
@@ -517,6 +518,7 @@ td{
 		border-bottom: 1px solid #000000;
 		border-left: 1px solid #000000;
 		padding: 9.5px 8px;
+		background-color: transparent;
 	}
 	
 	.speechBubble{
