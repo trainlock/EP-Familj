@@ -106,24 +106,31 @@
 }
 
 #animationSearchButton{
-	color: #000000;
-	border: 1px solid #B1BFC4;
+	background-color: #677980;
+	color: #FFFFFF;
+	border-radius: 4px;
+	border: 1px solid #FFFFFF;
+	font-family: Myriad Pro;
 	font-size: 8px;
 	float: left;
 	margin-left: 36%;
 	margin-top: 3px;
 	height: 12px;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 #animationHelpIcon{
 	height: 11px;
 	width: 11px;
-	background-color: #C2D4A1;
-	border-radius: 50%;
+	background-color: #d11717;
+	color:#FFFFFF; 
+	border-radius: 5px;
 	margin: 3.5px 0 0 6px;
 	float: left;
 	cursor: default;
-	background: radial-gradient(circle at 4px 4px, #C2D4A1, #000000);
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
 	padding: 1px 0 0 1px;
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 500;

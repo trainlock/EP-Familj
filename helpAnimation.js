@@ -754,9 +754,9 @@ function changeButtonBackgroundColor(buttonID, action){
 	var background;
 	
 	if(action == "press")
-		background = "#B3D2F5";
+		background = "#88999E";
 	else
-		background = "#C8DEF7"
+		background = "#677980"
 	
 	
 	buttonElement.style.backgroundColor = background;
