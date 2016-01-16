@@ -368,10 +368,6 @@ h2{
 	transform: scale(1.5);
 }
 
-.searchResultContainer{
-	//height: 100%;
-}
-
 /* Div med previous och next knappar */
 .buttonDiv{
 	margin: 8vw auto 6vh 60%;
