@@ -237,7 +237,7 @@ li a:hover{
 	width: 160px;
 	background-color: #FFFFFF;
 	padding: 8px 12px;
-	top: 30px;
+	top: 38px;
 	margin-left: 52px;
 	border-radius: 24px;
 	border: 2px solid #262626;
@@ -522,10 +522,6 @@ td{
 		background-color: transparent;
 	}
 	
-	.speechBubble{
-		top: 38px;
-	}
-	
 	.speechBubble:before{
 		bottom: -56px;
 		border-color: #000000 transparent transparent #000000;
@@ -536,7 +532,7 @@ td{
 	}
 	
 	#helpContainer{
-		margin-top: -218px;
+		margin-top: -216px;
 	}
 	
 	#imgLogotyp{
@@ -583,13 +579,13 @@ td{
 	}
 	
 	.speechBubble:before{
-		top: 102px;
+		top: 126px;
 		bottom: -30px;
 		left: 85px;		
 		border-color: #000000 transparent transparent #000000;
 	}
 	.speechBubble:after{
-		top: 98px;
+		top: 121px;
 		bottom: 0;
 		left: 87px;
 		border-color: #FFFFFF transparent transparent #FFFFFF;
